@@ -3,5 +3,5 @@ export default {
         return { top: 0 }
     },
     strict: true,
-    trailingSlash: false
+    trailingSlash: true
 }

@@ -51,17 +51,22 @@ const navigation: NavItem[] = [
     {
         key: 'find-us',
         label: 'Find Us',
-        url: '/where'
+        url: '/where/'
+    },
+    {
+        key: 'team',
+        label: 'Team',
+        url: '/team/'
     },
     {
         key: 'bookings',
         label: 'Bookings',
-        url: '/bookings'
+        url: '/bookings/'
     },
     {
         key: 'contact',
         label: 'Contact',
-        url: '/contact'
+        url: '/contact/'
     }
 ]
 </script>

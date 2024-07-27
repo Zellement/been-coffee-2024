@@ -15,7 +15,7 @@
                     :class="mobileNavWrapperClasses"
                 >
                     <site-brand
-                        class="col-span-10 col-start-2 row-start-1 lg:hidden"
+                        class="col-span-10 col-start-2 row-start-1 h-10 w-10 lg:hidden"
                     />
                     <button
                         class="relative z-10 col-start-11 row-start-1 lg:hidden"
@@ -29,6 +29,7 @@
                         ul-classes="flex gap-2 flex-col lg:flex-row lg:gap-4 lg:justify-end"
                     />
                     <button
+                        class="hidden lg:block"
                         aria-label="Toggle light and dark modes"
                         @click="toggleColourMode"
                     >
