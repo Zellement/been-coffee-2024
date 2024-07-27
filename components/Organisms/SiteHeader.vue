@@ -52,7 +52,6 @@ interface State {
     scrollOffset: number
 }
 
-
 /* --------------------------
 // States, stores and props
 -------------------------- */

@@ -36,9 +36,9 @@ export default {
         fontFamily: {
             riverside: ['Riverside', 'Impact', 'sans-serif'],
             'riverside-outline': ['Riverside Outline', 'Impact', 'sans-serif'],
-            krete: ['Krete', 'Georgia', 'serif']
+            krete: ['Krete', 'Georgia', 'serif'],
+            sans: ['Roboto', 'sans-serif']
         },
-
         fontSize: {
             /* Step -1: 14.17px → 16.00px */
             xs: [
