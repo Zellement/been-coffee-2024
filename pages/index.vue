@@ -4,7 +4,7 @@
         <div class="container grid-layout">
             <div class="col-span-full py-16">
                 <h2
-                    class="font-riverside text-[8vw] leading-[6vw] dark:text-butterscotch"
+                    class="font-riverside text-[8vw] leading-[6vw] text-butterscotch"
                 >
                     Award Winning.
                 </h2>

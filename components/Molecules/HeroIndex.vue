@@ -1,14 +1,17 @@
 <template>
     <div class="container grid grid-cols-12">
         <div class="relative col-span-6 col-start-1 -row-start-1">
-            <h1 :class="spanClasses" class="font-riverside">
+            <h1
+                :class="spanClasses"
+                class="text-gradient--butterscotch-tuscany dark:text-gradient--navy-darkNavy font-riverside text-butterscotch dark:text-navy-400"
+            >
                 <span>Been</span>
                 <span>Coffee</span>
             </h1>
             <span
                 aria-hidden="true"
                 :class="spanClasses"
-                class="mt-[1vw] translate-x-[1vw] font-riverside-outline dark:text-butterscotch"
+                class="ml-[1vw] mt-[1vw] font-riverside-outline text-navy dark:text-butterscotch"
             >
                 <span>Been</span>
                 <span>Coffee</span>
@@ -22,6 +25,6 @@
 
 <script lang="ts" setup>
 const spanClasses: ComputedRef<string> = computed(() => {
-    return 'absolute left-0 top-1/2 -translate-y-1/2 flex flex-col text-[26vw] leading-[22vw] tracking-tight text-butterscotch-200 dark:text-navy-400 xl:text-[20vw] xl:leading-[16vw] '
+    return 'absolute left-0 top-1/2 -translate-y-1/2 flex flex-col text-[26vw] leading-[22vw] tracking-tight xl:text-[20vw] xl:leading-[16vw] '
 })
 </script>

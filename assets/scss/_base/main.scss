@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    @apply antialiased text-base font-sans text-navy dark:text-seashell dark:bg-navy-500;
+    @apply antialiased text-base font-sans text-navy bg-seashell dark:text-seashell dark:bg-navy-500;
 }
 
 picture img {
