@@ -2,15 +2,18 @@
     <header
         role="banner"
         :class="headerClasses"
-        class="fixed left-0 right-0 top-0 z-50 w-full bg-white/80 py-4 transition-transform duration-500 lg:bg-opacity-20 lg:py-6 lg:backdrop-blur"
+        class="fixed left-0 right-0 top-0 z-50 w-full transition-[padding] duration-500"
     >
         <div class="grid-layout">
             <div
                 class="relative col-span-9 col-start-2 row-start-1 flex w-full items-center justify-between lg:col-span-10 lg:col-start-2"
             >
-                <site-brand class="" />
+                <site-brand
+                    class="transition-all duration-300"
+                    :class="siteBrandClasses"
+                />
                 <div
-                    class="fixed inset-0 z-10 grid h-screen w-full grid-flow-row auto-rows-max grid-cols-12 overflow-y-scroll bg-gray-100 py-4 transition-all duration-300 lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:overflow-y-visible lg:bg-transparent lg:p-0"
+                    class="fixed inset-0 z-10 grid h-screen w-full grid-flow-row auto-rows-max grid-cols-12 overflow-y-scroll bg-gray-100 py-4 transition-all duration-300 lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0"
                     :class="mobileNavWrapperClasses"
                 >
                     <site-brand
@@ -27,6 +30,12 @@
                         class="col-span-10 col-start-2 row-start-2 mt-8 lg:mt-0 lg:w-full"
                         ul-classes="flex gap-2 flex-col lg:flex-row lg:gap-4 lg:justify-end"
                     />
+                    <button
+                        aria-label="Toggle light and dark modes"
+                        @click="toggleColourMode"
+                    >
+                        <svg-icon name="ui/sun" class="h-6 w-6 opacity-50" />
+                    </button>
                 </div>
             </div>
             <button
@@ -62,12 +71,25 @@ const state: State = reactive({
     lastScrollPosition: 0,
     scrollOffset: 40
 })
+const colorMode = useColorMode()
+
+const toggleColourMode = (): void => {
+    if (colorMode.preference === 'system' || colorMode.preference === 'dark') {
+        colorMode.preference = 'light'
+    } else {
+        colorMode.preference = 'dark'
+    }
+}
 
 /* --------------------------
 // Computed
 -------------------------- */
 const headerClasses: ComputedRef<string> = computed(() => {
-    return state.showHeader ? 'translate-y-0' : '-translate-y-full'
+    return state.showHeader ? 'py-6' : 'py-2'
+})
+
+const siteBrandClasses: ComputedRef<string> = computed(() => {
+    return state.showHeader ? 'w-12 h-12' : 'w-8 h-8'
 })
 
 const mobileNavWrapperClasses: ComputedRef<string> = computed(() => {

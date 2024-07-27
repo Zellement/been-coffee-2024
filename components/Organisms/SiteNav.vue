@@ -44,36 +44,19 @@ defineProps<{
 
 const navigation: NavItem[] = [
     {
-        key: 'home',
-        label: 'Home',
+        key: 'about',
+        label: 'About',
         url: '/'
     },
     {
-        key: 'about',
-        label: 'About',
-        url: '/about'
+        key: 'find-us',
+        label: 'Find Us',
+        url: '/where'
     },
     {
-        key: 'services',
-        label: 'Services',
-        url: '/services',
-        subItems: [
-            {
-                key: 'webDevelopment',
-                label: 'Web Development',
-                url: '/services/web-development'
-            },
-            {
-                key: 'graphicDesign',
-                label: 'Graphic Design',
-                url: '/services/graphic-design'
-            }
-        ]
-    },
-    {
-        key: 'blog',
-        label: 'Blog',
-        url: '/blog'
+        key: 'bookings',
+        label: 'Bookings',
+        url: '/bookings'
     },
     {
         key: 'contact',

@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <modular-content />
+        <hero-index />
     </div>
 </template>
 

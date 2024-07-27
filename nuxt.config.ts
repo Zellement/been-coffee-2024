@@ -1,131 +1,135 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import eslintVitePlugin from 'vite-plugin-eslint'
-import {fileURLToPath} from 'url';
+import { fileURLToPath } from 'url'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // Fix for issue - https://github.com/nuxt-modules/tailwindcss/issues/480
-  devServerHandlers: [],
+    // Fix for issue - https://github.com/nuxt-modules/tailwindcss/issues/480
+    devServerHandlers: [],
 
-  modules: [
-      // Core
-      '@nuxt/image',
-      '@pinia/nuxt',
+    modules: [
+        // Core
+        '@nuxt/image',
+        '@pinia/nuxt',
 
-      // UI
-      '@nuxtjs/tailwindcss',
-      '@nuxtjs/svg-sprite'
+        // UI
+        '@nuxtjs/tailwindcss',
+        '@nuxtjs/svg-sprite',
+        '@nuxtjs/color-mode'
 
-      // SEO
-      // '@nuxtjs/robots',
-      // 'nuxt-gtag',
-      // '@nuxtjs/sitemap'
-  ],
+        // SEO
+        // '@nuxtjs/robots',
+        // 'nuxt-gtag',
+        // '@nuxtjs/sitemap'
+    ],
 
-  svgSprite: {
-      input: '~/assets/icons/svg',
-      output: '~/assets/icons/sprites'
-  },
+    colorMode: {
+        classSuffix: ''
+    },
 
-  tailwindcss: {
-      cssPath: '~/assets/scss/app.scss'
-  },
+    svgSprite: {
+        input: '~/assets/icons/svg',
+        output: '~/assets/icons/sprites'
+    },
 
-  image: {
-      provider: 'contentful',
-      contentful: {}
-  },
+    tailwindcss: {
+        cssPath: '~/assets/scss/app.scss'
+    },
 
-  css: ['@/assets/scss/app.scss'],
+    // image: {
+    //     provider: 'contentful',
+    //     contentful: {}
+    // },
 
-  // Use with: nuxt-simple-sitemap
-  // site: {
-  //     url: process.env.WEBSITE_URL
-  // },
-  // sitemap: {
-  //     sources: [
-  //         '/api/sitemap/urls'
-  //     ]
-  // },
-  components: [
-      {
-          path: '~/components',
-          pathPrefix: false
-      }
-  ],
+    css: ['@/assets/scss/app.scss'],
 
-  // Allows for local testing on devices
-  devServer: {
-      port: 3000, // default: 3000
-      host: '0.0.0.0' // default: localhost
-  },
+    // Use with: nuxt-simple-sitemap
+    // site: {
+    //     url: process.env.WEBSITE_URL
+    // },
+    // sitemap: {
+    //     sources: [
+    //         '/api/sitemap/urls'
+    //     ]
+    // },
+    components: [
+        {
+            path: '~/components',
+            pathPrefix: false
+        }
+    ],
 
-  alias: {
-      '@blocks': fileURLToPath(
-          new URL(
-              './components/Organisms/_ModularContentBlocks/',
-              import.meta.url
-          )
-      )
-  },
+    // Allows for local testing on devices
+    devServer: {
+        port: 3000, // default: 3000
+        host: '0.0.0.0' // default: localhost
+    },
 
-  app: {
-      head: {
-          htmlAttrs: {
-              lang: 'en'
-          },
-          meta: [
-              {
-                  name: 'viewport',
-                  content: 'width=device-width, initial-scale=1'
-              },
-              {
-                  name: 'description',
-                  content: 'something'
-              },
-              { hid: 'og-type', property: 'og:type', content: 'website' }
-          ],
-          link: [
-              {
-                  rel: 'icon',
-                  type: 'image/x-icon',
-                  href: '/favicon.png'
-              }
-          ]
-      },
-      pageTransition: { name: 'page', mode: 'out-in' }
-  },
+    alias: {
+        '@blocks': fileURLToPath(
+            new URL(
+                './components/Organisms/_ModularContentBlocks/',
+                import.meta.url
+            )
+        )
+    },
 
-  runtimeConfig: {
-      public: {
-      }
-  },
+    app: {
+        head: {
+            htmlAttrs: {
+                lang: 'en'
+            },
+            meta: [
+                {
+                    name: 'viewport',
+                    content: 'width=device-width, initial-scale=1'
+                },
+                {
+                    name: 'description',
+                    content: 'something'
+                },
+                { hid: 'og-type', property: 'og:type', content: 'website' }
+            ],
+            link: [
+                {
+                    rel: 'icon',
+                    type: 'image/x-icon',
+                    href: '/favicon.png'
+                }
+            ]
+        },
+        pageTransition: { name: 'page', mode: 'out-in' }
+    },
 
-  vite: {
-      plugins: [
-          eslintVitePlugin({
-              fix: true,
-              include: ['./**/*.vue', './**/*.ts', './**/*.js']
-          })
-      ]
-  },
+    runtimeConfig: {
+        public: {}
+    },
 
-  typescript: {
-      typeCheck: true,
-      strict: true,
-      tsConfig: {
-          compilerOptions: {
-              strict: true
-          },
-          include: [
-              '@pinia/nuxt',
-              '@types/node',
-              '@nuxt/image',
-              '@nuxt/types',
-              '**/*.d.ts'
-          ]
-      }
-  },
+    vite: {
+        plugins: [
+            eslintVitePlugin({
+                fix: true,
+                include: ['./**/*.vue', './**/*.ts', './**/*.js']
+            })
+        ]
+    },
 
-  compatibilityDate: '2024-07-27'
+    typescript: {
+        typeCheck: true,
+        strict: true,
+        tsConfig: {
+            compilerOptions: {
+                strict: true
+            },
+            include: [
+                '@pinia/nuxt',
+                '@types/node',
+                '@nuxt/image',
+                '@nuxt/types',
+                '**/*.d.ts'
+            ]
+        }
+    },
+
+    compatibilityDate: '2024-07-27'
 })
