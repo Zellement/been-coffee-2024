@@ -4,16 +4,14 @@
         :class="headerClasses"
         class="fixed left-0 right-0 top-0 z-50 w-full transition-[padding] duration-500"
     >
-        <div class="grid-layout">
-            <div
-                class="relative col-span-9 col-start-2 row-start-1 flex w-full items-center justify-between lg:col-span-10 lg:col-start-2"
-            >
+        <div class="flex px-2">
+            <div class="relative flex w-full items-center justify-between">
                 <site-brand
                     class="transition-all duration-300"
                     :class="siteBrandClasses"
                 />
                 <div
-                    class="fixed inset-0 z-10 grid h-screen w-full grid-flow-row auto-rows-max grid-cols-12 overflow-y-scroll bg-gray-100 py-4 transition-all duration-300 lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0"
+                    class="fixed inset-0 z-10 grid h-screen w-full grid-flow-row auto-rows-max grid-cols-12 overflow-y-scroll bg-seashell py-4 transition-all duration-300 dark:bg-navy-800 lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0"
                     :class="mobileNavWrapperClasses"
                 >
                     <site-brand
@@ -39,11 +37,11 @@
                 </div>
             </div>
             <button
-                class="col-start-11 row-start-1 lg:hidden"
+                class="dark:text-butterscotch-500 lg:hidden"
                 aria-label="Open mobile navigation"
                 @click="uiStore.toggleMobileNav(true)"
             >
-                <svg-icon name="ui/hamburger" class="ml-auto h-10 w-10" />
+                <svg-icon name="ui/hamburger" class="h-10 w-10" />
             </button>
         </div>
     </header>
@@ -85,11 +83,13 @@ const toggleColourMode = (): void => {
 // Computed
 -------------------------- */
 const headerClasses: ComputedRef<string> = computed(() => {
-    return state.showHeader ? 'py-6' : 'py-2'
+    return state.showHeader ? 'py-2 lg:py-6' : 'py-2'
 })
 
 const siteBrandClasses: ComputedRef<string> = computed(() => {
-    return state.showHeader ? 'w-12 h-12' : 'w-8 h-8'
+    return state.showHeader
+        ? 'w-6  h-6 lg:w-12 lg:h-12'
+        : 'w-4 h-4 lg:w-8 lg:h-8'
 })
 
 const mobileNavWrapperClasses: ComputedRef<string> = computed(() => {
