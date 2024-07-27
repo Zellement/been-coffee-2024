@@ -1,10 +1,10 @@
 <template>
     <div class="container grid grid-cols-12">
         <div class="relative col-span-6 col-start-1 -row-start-1">
-            <span :class="spanClasses" class="font-riverside">
+            <h1 :class="spanClasses" class="font-riverside">
                 <span>Been</span>
                 <span>Coffee</span>
-            </span>
+            </h1>
             <span
                 aria-hidden="true"
                 :class="spanClasses"
