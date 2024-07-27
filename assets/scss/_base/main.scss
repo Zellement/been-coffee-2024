@@ -1,0 +1,67 @@
+/**
+ * ----------------------
+ * Base - Main
+ * ----------------------
+ */
+
+html {
+    @apply scroll-smooth;
+}
+
+body {
+    @apply antialiased text-base font-sans;
+}
+
+picture img {
+    @apply w-full h-full object-cover;
+}
+
+.page {
+    // ::before to push content down to overwrite fixed header
+    &::before {
+        content: "";
+
+        @apply h-[72px] w-full block lg:h-24;
+    }
+}
+
+.container {
+    @apply max-w-screen-max mx-auto;
+
+    &--sm {
+        @apply max-w-screen-sm;
+    }
+
+    &--md {
+        @apply max-w-screen-md;
+    }
+
+    &--lg {
+        @apply max-w-screen-lg;
+    }
+
+    &--xl {
+        @apply max-w-screen-xl;
+    }
+
+    &--2xl {
+        @apply max-w-screen-2xl;
+    }
+}
+
+.modular-content {
+    @apply flex flex-col space-y-16 lg:space-y-32;
+}
+
+.grid-layout {
+    @apply
+        w-full
+
+        grid
+        grid-cols-12
+        gap-2
+
+        md:gap-6
+
+        xl:gap-12;
+}
