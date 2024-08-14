@@ -49,6 +49,10 @@ picture img {
     }
 }
 
+.container-px {
+    @apply px-4;
+}
+
 .modular-content {
     @apply flex flex-col space-y-16 lg:space-y-32;
 }

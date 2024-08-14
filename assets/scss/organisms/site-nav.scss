@@ -1,12 +1,6 @@
 .site-nav {
     @apply font-riverside;
     .router-link-active {
-        @apply mb-5
-            border-b
-            px-4
-            pb-5
-            hover:underline
-            md:border-b-0
-            md:px-0;
+        @apply text-tuscany-500 dark:text-butterscotch-500;
     }
 }

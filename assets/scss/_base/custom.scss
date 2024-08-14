@@ -5,6 +5,12 @@
     -webkit-text-fill-color: transparent;
 
   }
+  .text-gradient--tuscany-butterscotch {
+    background: -webkit-linear-gradient(theme("colors.tuscany.500"), theme("colors.butterscotch.500"));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
 
   .text-gradient--navy-darkNavy {
     background: -webkit-linear-gradient(theme("colors.navy.300"), theme("colors.navy.400"));

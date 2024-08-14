@@ -3,7 +3,7 @@
         <div class="relative col-span-6 col-start-1 -row-start-1">
             <h1
                 :class="spanClasses"
-                class="text-gradient--butterscotch-tuscany dark:text-gradient--navy-darkNavy font-riverside text-butterscotch dark:text-navy-400"
+                class="text-gradient--tuscany-butterscotch dark:text-gradient--navy-darkNavy font-riverside text-butterscotch dark:text-navy-400"
             >
                 <span>Been</span>
                 <span>Coffee</span>
@@ -25,6 +25,6 @@
 
 <script lang="ts" setup>
 const spanClasses: ComputedRef<string> = computed(() => {
-    return 'absolute left-0 top-1/2 -translate-y-1/2 flex flex-col text-[26vw] leading-[22vw] tracking-tight xl:text-[20vw] xl:leading-[16vw] '
+    return 'pl-2 absolute left-0 top-1/2 -translate-y-1/2 flex flex-col text-[26vw] leading-[22vw] tracking-tight xl:text-[20vw] xl:leading-[18vw] max:text-[400px]/[340px]'
 })
 </script>

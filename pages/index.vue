@@ -1,15 +1,15 @@
 <template>
     <div class="page">
         <hero-index />
-        <div class="container grid-layout">
+        <div class="container grid-layout my-16">
             <div class="col-span-full py-16">
                 <h2
-                    class="font-riverside text-[8vw] leading-[6vw] text-butterscotch"
+                    class="font-riverside text-[8vw] leading-[6vw] text-butterscotch max:text-[170px]/[120px]"
                 >
                     Award Winning.
                 </h2>
                 <h2
-                    class="-translate-y-[2vw] text-right font-riverside-outline text-[8vw] leading-[6vw] dark:text-white"
+                    class="-translate-y-[2vw] text-right font-riverside-outline text-[8vw] leading-[6vw] dark:text-white max:text-[170px]/[120px]"
                 >
                     Fully Independent.
                 </h2>

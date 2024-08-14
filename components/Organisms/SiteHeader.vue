@@ -4,6 +4,15 @@
         :class="headerClasses"
         class="fixed left-0 right-0 top-0 z-50 w-full transition-[padding] duration-500"
     >
+        <div
+            :class="[bgOverlayClassesLeft, bgOverlayClassesShared]"
+            class="left-0 bg-gradient-to-r"
+        ></div>
+        <div
+            :class="[bgOverlayClassesRight, bgOverlayClassesShared]"
+            class="right-0 bg-gradient-to-l"
+        ></div>
+
         <div class="flex px-2">
             <div class="relative flex w-full items-center justify-between">
                 <site-brand
@@ -11,22 +20,24 @@
                     :class="siteBrandClasses"
                 />
                 <div
-                    class="fixed inset-0 z-10 grid h-screen w-full grid-flow-row auto-rows-max grid-cols-12 overflow-y-scroll bg-seashell py-4 transition-all duration-300 dark:bg-navy-800 lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0"
+                    class="fixed inset-0 z-10 h-screen w-full auto-rows-max overflow-y-scroll bg-seashell p-4 transition-all duration-300 lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0"
                     :class="mobileNavWrapperClasses"
                 >
-                    <site-brand
-                        class="col-span-10 col-start-2 row-start-1 h-10 w-10 lg:hidden"
-                    />
-                    <button
-                        class="relative z-10 col-start-11 row-start-1 lg:hidden"
-                        aria-label="Close mobile navigation"
-                        @click="uiStore.toggleMobileNav(false)"
-                    >
-                        <svg-icon name="ui/cross" class="ml-auto h-10 w-10" />
-                    </button>
+                    <div class="flex justify-between">
+                        <site-brand
+                            class="col-span-10 col-start-2 row-start-1 h-10 w-10 lg:hidden"
+                        />
+                        <button
+                            class="relative z-10 col-start-11 row-start-1 lg:hidden"
+                            aria-label="Close mobile navigation"
+                            @click="uiStore.toggleMobileNav(false)"
+                        >
+                            <svg-icon name="ui/cross" class="ml-auto h-8 w-8" />
+                        </button>
+                    </div>
                     <site-nav
-                        class="col-span-10 col-start-2 row-start-2 mt-8 lg:mt-0 lg:w-full"
-                        ul-classes="flex gap-2 flex-col lg:flex-row lg:gap-4 lg:justify-end"
+                        class="mt-8 lg:mt-0 lg:w-full"
+                        ul-classes="flex gap-2 flex-col lg:flex-row lg:gap-4 lg:justify-end text-3xl lg:text-base"
                     />
                     <button
                         class="hidden lg:block"
@@ -42,7 +53,7 @@
                 aria-label="Open mobile navigation"
                 @click="uiStore.toggleMobileNav(true)"
             >
-                <svg-icon name="ui/hamburger" class="h-10 w-10" />
+                <svg-icon name="ui/hamburger" class="h-6 w-6" />
             </button>
         </div>
     </header>
@@ -89,14 +100,26 @@ const headerClasses: ComputedRef<string> = computed(() => {
 
 const siteBrandClasses: ComputedRef<string> = computed(() => {
     return state.showHeader
-        ? 'w-6  h-6 lg:w-12 lg:h-12'
-        : 'w-4 h-4 lg:w-8 lg:h-8'
+        ? 'w-8 h-8 lg:w-12 lg:h-12'
+        : 'w-5 h-5 lg:w-8 lg:h-8'
 })
 
 const mobileNavWrapperClasses: ComputedRef<string> = computed(() => {
     return uiStore.showMobileNav
         ? 'translate-x-0'
         : 'translate-x-full lg:translate-x-0'
+})
+
+const bgOverlayClassesShared: ComputedRef<string> = computed(() => {
+    return 'absolute bottom-0  top-0 h-full w-1/2  from-butterscotch-500 to-tuscany-500 transition-all duration-500 dark:from-navy-400 dark:to-navy-600 '
+})
+
+const bgOverlayClassesRight: ComputedRef<string> = computed(() => {
+    return state.showHeader ? 'translate-x-full' : 'translate-x-0'
+})
+
+const bgOverlayClassesLeft: ComputedRef<string> = computed(() => {
+    return state.showHeader ? '-translate-x-full' : '-translate-x-0'
 })
 
 /* --------------------------
