@@ -3,7 +3,7 @@
         <li
             v-for="award in allAwards"
             :key="award._id"
-            class="flex min-w-32 flex-1 flex-shrink-0 flex-col items-center gap-2 p-4"
+            class="min-w-26 flex-1 flex-shrink-0 basis-1/3 flex-col items-center gap-2 p-4"
         >
             <div class="flex-shrink-0">
                 <SanityImage
@@ -40,7 +40,7 @@ const hasAwards = computed(
 const fetchAwards = async () => {
     const sanity = useSanity()
 
-    const query = `*[_type == "award"]|order(dateAwarded desc){
+    const query = `*[_type == "award"]|order(date desc){
     _id,
     name,
     shortName,

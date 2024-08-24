@@ -17,7 +17,9 @@
                 <span>Coffee</span>
             </span>
         </div>
-        <div class="col-span-8 col-start-5 row-start-1 xl:aspect-landscape">
+        <div
+            class="col-span-10 col-start-3 row-start-1 xl:col-span-8 xl:col-start-5 xl:aspect-landscape"
+        >
             <nuxt-picture src="/img/shop-exterior.jpeg" alt="Shop exterior" />
         </div>
     </div>
@@ -25,6 +27,6 @@
 
 <script lang="ts" setup>
 const spanClasses: ComputedRef<string> = computed(() => {
-    return 'pl-2 absolute left-0 top-1/2 -translate-y-1/2 flex flex-col text-[26vw] leading-[22vw] tracking-tight xl:text-[20vw] xl:leading-[18vw] max:text-[400px]/[340px]'
+    return 'pl-2 absolute left-0 top-1/2 -translate-y-1/2 flex flex-col text-[33vw] leading-[29vw] tracking-tight xl:text-[20vw] xl:leading-[18vw] max:text-[400px]/[340px]'
 })
 </script>

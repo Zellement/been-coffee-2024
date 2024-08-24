@@ -20,7 +20,7 @@
                     :class="siteBrandClasses"
                 />
                 <div
-                    class="fixed inset-0 z-10 h-screen w-full auto-rows-max overflow-y-scroll bg-seashell p-4 transition-all duration-300 lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0"
+                    class="fixed inset-0 z-10 h-screen w-full auto-rows-max overflow-y-scroll bg-seashell p-4 transition-all duration-300 dark:bg-navy lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0 dark:lg:bg-transparent"
                     :class="mobileNavWrapperClasses"
                 >
                     <div class="flex justify-between">
