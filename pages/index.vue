@@ -5,7 +5,15 @@
             class="container container-px grid-layout mb-8 mt-12 xl:my-16"
             left="Award winning."
             right="Fully independent."
-        />
+        >
+            <div class="flex">
+                <h3
+                    class="mx-auto inline-flex flex-col self-center border-l border-r border-current px-4 text-center font-krete uppercase tracking-wider"
+                >
+                    <span>Since</span> <span class="lining-nums">2021</span>
+                </h3>
+            </div>
+        </double-title>
         <intro-index />
         <awards-won class="mt-16" />
         <double-title
@@ -21,7 +29,9 @@
                 and traditional scotch eggs.
             </p>
         </div>
-        <div class="my-16 grid grid-cols-2 gap-2 lg:grid-cols-4">
+        <div
+            class="my-16 grid grid-cols-2 gap-2 overflow-hidden lg:grid-cols-4"
+        >
             <div
                 v-for="(item, index) in media"
                 :key="index"
@@ -69,6 +79,28 @@
                     {{ item }}
                 </h3>
             </div>
+        </div>
+        <double-title
+            class="container container-px grid-layout mt-8 xl:mt-16"
+            left="Doing our bit"
+            right="for the environment."
+        />
+        <div
+            class="container container-px text-center lg:grid lg:grid-cols-2 lg:text-left"
+        >
+            <p class="mx-auto">
+                We strive to make everything as environmentally friendly and
+                sustainable as possible; our takeaway cups are compostable (even
+                the lids!), our pre-packed drinks are all in cans (no plastic!)
+                and we strive to choose suppliers that share our vision for a
+                greener future.
+            </p>
+            <p>
+                When we opened in late 2021, we decided we wanted to prioritise
+                helping our environment as much as a small business can, by
+                choosing to use sustainably sourced ingredients and reduce the
+                amount of non-recyclable waste we were producing.
+            </p>
         </div>
     </div>
 </template>

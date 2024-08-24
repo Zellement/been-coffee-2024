@@ -20,7 +20,7 @@
                     :class="siteBrandClasses"
                 />
                 <div
-                    class="fixed inset-0 z-10 h-screen w-full auto-rows-max overflow-y-scroll bg-seashell p-4 transition-all duration-300 dark:bg-navy lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0 dark:lg:bg-transparent"
+                    class="fixed inset-0 z-30 h-screen w-full auto-rows-max overflow-y-scroll bg-seashell p-4 transition-all duration-300 dark:bg-navy lg:static lg:inset-auto lg:z-auto lg:flex lg:h-auto lg:items-center lg:overflow-y-visible lg:bg-transparent lg:p-0 dark:lg:bg-transparent"
                     :class="mobileNavWrapperClasses"
                 >
                     <div class="flex justify-between">
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <button
-                class="dark:text-butterscotch-500 lg:hidden"
+                class="z-10 dark:text-butterscotch-500 lg:hidden"
                 aria-label="Open mobile navigation"
                 @click="uiStore.toggleMobileNav(true)"
             >
@@ -111,15 +111,15 @@ const mobileNavWrapperClasses: ComputedRef<string> = computed(() => {
 })
 
 const bgOverlayClassesShared: ComputedRef<string> = computed(() => {
-    return 'absolute bottom-0  top-0 h-full w-1/2  from-butterscotch-500 to-tuscany-500 transition-all duration-500 dark:from-navy-400 dark:to-navy-600 hidden xl:flex'
+    return 'absolute bottom-0  top-0 h-full w-1/2  from-butterscotch-500 to-tuscany-500 transition-all duration-500 dark:from-navy-400 dark:to-navy-600'
 })
 
 const bgOverlayClassesRight: ComputedRef<string> = computed(() => {
-    return state.showHeader ? 'xl:translate-x-full' : 'xl:translate-x-0'
+    return state.showHeader ? 'translate-x-full' : 'translate-x-0'
 })
 
 const bgOverlayClassesLeft: ComputedRef<string> = computed(() => {
-    return state.showHeader ? 'xl:-translate-x-full' : 'xl:-translate-x-0'
+    return state.showHeader ? '-translate-x-full' : '-translate-x-0'
 })
 
 /* --------------------------

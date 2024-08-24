@@ -15,6 +15,7 @@
                     {{ right }}
                 </span>
             </h2>
+            <slot />
         </div>
     </div>
 </template>
