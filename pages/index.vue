@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div class="page pb-16">
         <hero-index />
         <double-title
             class="container container-px grid-layout mb-8 mt-12 xl:my-16"
@@ -66,15 +66,20 @@
                 and we have a handmade vegan sausage roll.
             </p>
         </div>
-        <div class="container my-16 flex w-full flex-col gap-8">
+        <div class="container group my-16 flex w-full flex-col gap-8">
             <div
                 class="flex flex-wrap items-center justify-center space-x-4 space-y-1 text-center text-[8vw]/[8vw] md:text-[4vw]/[4vw]"
             >
                 <h3
                     v-for="(item, index) in menuItems"
                     :key="item + index"
-                    class="font-riverside-outline"
-                    :class="getRandomColor()"
+                    class="peer cursor-crosshair font-riverside-outline brightness-100 transition-all duration-300 peer-hover:brightness-110"
+                    :class="[
+                        getRandomColor(),
+                        index % 2 === 0
+                            ? 'peer-hover:rotate-1'
+                            : 'peer-hover:-rotate-1'
+                    ]"
                 >
                     {{ item }}
                 </h3>
@@ -86,21 +91,32 @@
             right="for the environment."
         />
         <div
-            class="container container-px text-center lg:grid lg:grid-cols-2 lg:text-left"
+            class="container container-px container--sm lg:container--lg flex flex-col gap-8 text-center lg:grid lg:grid-cols-3 lg:text-left"
         >
-            <p class="mx-auto">
-                We strive to make everything as environmentally friendly and
-                sustainable as possible; our takeaway cups are compostable (even
-                the lids!), our pre-packed drinks are all in cans (no plastic!)
-                and we strive to choose suppliers that share our vision for a
-                greener future.
-            </p>
-            <p>
-                When we opened in late 2021, we decided we wanted to prioritise
-                helping our environment as much as a small business can, by
-                choosing to use sustainably sourced ingredients and reduce the
-                amount of non-recyclable waste we were producing.
-            </p>
+            <div>
+                <p class="mb-4 font-krete text-[1.1em]">
+                    We strive to make everything as environmentally friendly and
+                    sustainable as possible.
+                </p>
+                <p>
+                    Our takeaway cups are compostable (even the lids!), our
+                    pre-packed drinks are all in cans (no plastic!) and we
+                    strive to choose suppliers that share our vision for a
+                    greener future.
+                </p>
+            </div>
+            <div class="h-full overflow-hidden">
+                <nuxt-picture src="/img/cans2.jpeg" alt="Cans and bottles" />
+            </div>
+            <div class="flex items-end">
+                <p>
+                    When we opened in late 2021, we decided we wanted to
+                    prioritise helping our environment as much as a small
+                    business can, by choosing to use sustainably sourced
+                    ingredients and reduce the amount of non-recyclable waste we
+                    were producing.
+                </p>
+            </div>
         </div>
     </div>
 </template>
@@ -168,11 +184,7 @@ const media = ref([
 ])
 let lastColor = ''
 
-const colors = ref([
-    'text-tuscany-500',
-    'text-butterscotch-500',
-    'text-current'
-])
+const colors = ref(['text-tuscany-500', 'text-butterscotch-500'])
 
 const getRandomColor = () => {
     let randomColor

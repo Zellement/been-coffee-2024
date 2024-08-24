@@ -25,32 +25,35 @@ picture img {
     }
 }
 
-.container {
-    @apply max-w-screen-max mx-auto;
+@layer utilities {
+    .container {
+        @apply max-w-screen-max mx-auto;
 
-    &--sm {
-        @apply max-w-screen-sm;
+        &--sm {
+            @apply max-w-screen-sm;
+        }
+
+        &--md {
+            @apply max-w-screen-md;
+        }
+
+        &--lg {
+            @apply max-w-screen-lg;
+        }
+
+        &--xl {
+            @apply max-w-screen-xl;
+        }
+
+        &--2xl {
+            @apply max-w-screen-2xl;
+        }
     }
 
-    &--md {
-        @apply max-w-screen-md;
-    }
 
-    &--lg {
-        @apply max-w-screen-lg;
+    .container-px {
+        @apply px-4;
     }
-
-    &--xl {
-        @apply max-w-screen-xl;
-    }
-
-    &--2xl {
-        @apply max-w-screen-2xl;
-    }
-}
-
-.container-px {
-    @apply px-4;
 }
 
 .modular-content {

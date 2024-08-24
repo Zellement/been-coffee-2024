@@ -13,7 +13,7 @@
             class="right-0 bg-gradient-to-l"
         ></div>
 
-        <div class="flex px-2">
+        <div class="flex items-center px-2">
             <div class="relative flex w-full items-center justify-between">
                 <site-brand
                     class="transition-all duration-300"
@@ -39,15 +39,15 @@
                         class="mt-8 lg:mt-0 lg:w-full"
                         ul-classes="flex gap-2 flex-col lg:flex-row lg:gap-4 lg:justify-end text-3xl lg:text-base"
                     />
-                    <button
-                        class="hidden lg:block"
-                        aria-label="Toggle light and dark modes"
-                        @click="toggleColourMode"
-                    >
-                        <svg-icon name="ui/sun" class="h-6 w-6 opacity-50" />
-                    </button>
                 </div>
             </div>
+            <button
+                class="z-10 mr-4 dark:text-butterscotch-500 lg:block"
+                aria-label="Toggle light and dark modes"
+                @click="toggleColourMode"
+            >
+                <svg-icon name="ui/sun" class="h-6 w-6" />
+            </button>
             <button
                 class="z-10 dark:text-butterscotch-500 lg:hidden"
                 aria-label="Open mobile navigation"
