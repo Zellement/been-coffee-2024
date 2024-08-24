@@ -10,7 +10,7 @@
                 </span>
                 <span
                     v-if="right"
-                    class="block -translate-y-[2vw] text-right font-riverside-outline text-[11vw]/[10vw] dark:text-white xl:text-[8vw] xl:leading-[6vw] max:text-[170px]/[120px]"
+                    class="block -translate-y-[3vw] text-right font-riverside-outline text-[11vw]/[10vw] dark:text-white xl:text-[8vw] xl:leading-[6vw] max:text-[170px]/[120px]"
                 >
                     {{ right }}
                 </span>
