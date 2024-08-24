@@ -111,15 +111,15 @@ const mobileNavWrapperClasses: ComputedRef<string> = computed(() => {
 })
 
 const bgOverlayClassesShared: ComputedRef<string> = computed(() => {
-    return 'absolute bottom-0  top-0 h-full w-1/2  from-butterscotch-500 to-tuscany-500 transition-all duration-500 dark:from-navy-400 dark:to-navy-600 '
+    return 'absolute bottom-0  top-0 h-full w-1/2  from-butterscotch-500 to-tuscany-500 transition-all duration-500 dark:from-navy-400 dark:to-navy-600 hidden xl:flex'
 })
 
 const bgOverlayClassesRight: ComputedRef<string> = computed(() => {
-    return state.showHeader ? 'translate-x-full' : 'translate-x-0'
+    return state.showHeader ? 'xl:translate-x-full' : 'xl:translate-x-0'
 })
 
 const bgOverlayClassesLeft: ComputedRef<string> = computed(() => {
-    return state.showHeader ? '-translate-x-full' : '-translate-x-0'
+    return state.showHeader ? 'xl:-translate-x-full' : 'xl:-translate-x-0'
 })
 
 /* --------------------------
