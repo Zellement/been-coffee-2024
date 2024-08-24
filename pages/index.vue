@@ -22,45 +22,17 @@
             </p>
         </div>
         <div class="my-16 grid grid-cols-2 gap-2 lg:grid-cols-4">
-            <div class="relative -rotate-3">
-                <nuxt-picture
-                    src="/img/food/pizza-bagel.jpg"
-                    alt="Pizza bagel"
-                />
+            <div
+                v-for="(item, index) in media"
+                :key="index"
+                :class="['relative', item.class]"
+            >
+                <nuxt-picture :src="item.src" :alt="item.alt" />
                 <span
                     class="absolute bottom-0 right-2 font-krete text-[12px] text-white"
-                    >Margherita pizza bagel</span
                 >
-            </div>
-            <div class="relative -translate-y-4 rotate-3">
-                <nuxt-picture
-                    src="/img/food/monster.jpg"
-                    alt="The Monster cob"
-                />
-                <span
-                    class="absolute bottom-0 right-2 font-krete text-[12px] text-white"
-                    >The Monster cob</span
-                >
-            </div>
-            <div class="relative -rotate-1">
-                <nuxt-picture
-                    src="/img/food/smoked-salmon.jpg"
-                    alt="Smoked salmon"
-                />
-                <span
-                    class="absolute bottom-0 right-2 font-krete text-[12px] text-white"
-                    >Smoked salmon bagel</span
-                >
-            </div>
-            <div class="relative -translate-y-4 rotate-2">
-                <nuxt-picture
-                    src="/img/food/bacon-philly.jpg"
-                    alt="Bacon & Philly"
-                />
-                <span
-                    class="absolute bottom-0 right-2 font-krete text-[12px] text-white"
-                    >Bacon &amp; Philly bagel</span
-                >
+                    {{ item.caption }}
+                </span>
             </div>
         </div>
         <div class="container container-px text-center">
@@ -89,7 +61,7 @@
                 class="flex flex-wrap items-center justify-center space-x-4 space-y-1 text-center text-[8vw]/[8vw] md:text-[4vw]/[4vw]"
             >
                 <h3
-                    v-for="(item, index) in items"
+                    v-for="(item, index) in menuItems"
                     :key="item + index"
                     class="font-riverside-outline"
                     :class="getRandomColor()"
@@ -102,7 +74,7 @@
 </template>
 
 <script setup lang="ts">
-const items = ref([
+const menuItems = ref([
     'Bagels',
     'Paninis',
     'Cobs',
@@ -136,6 +108,32 @@ const items = ref([
     'Smoothies'
 ])
 
+const media = ref([
+    {
+        src: '/img/food/pizza-bagel.jpg',
+        alt: 'Pizza bagel',
+        caption: 'Margherita pizza bagel',
+        class: '-rotate-3'
+    },
+    {
+        src: '/img/food/monster.jpg',
+        alt: 'The Monster cob',
+        caption: 'The Monster cob',
+        class: '-translate-y-4 rotate-3'
+    },
+    {
+        src: '/img/food/smoked-salmon.jpg',
+        alt: 'Smoked salmon',
+        caption: 'Smoked salmon bagel',
+        class: '-rotate-1'
+    },
+    {
+        src: '/img/food/bacon-philly.jpg',
+        alt: 'Bacon & Philly',
+        caption: 'Bacon & Philly bagel',
+        class: '-translate-y-4 rotate-2'
+    }
+])
 let lastColor = ''
 
 const colors = ref([
