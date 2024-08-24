@@ -68,12 +68,12 @@
         </div>
         <div class="container group my-16 flex w-full flex-col gap-8">
             <div
-                class="flex flex-wrap items-center justify-center space-x-4 space-y-1 text-center text-[8vw]/[8vw] md:text-[4vw]/[4vw]"
+                class="flex flex-wrap items-center justify-center space-x-4 text-center text-[8vw]/[8vw] md:text-[4vw]/[4vw]"
             >
                 <h3
                     v-for="(item, index) in menuItems"
                     :key="item + index"
-                    class="peer cursor-crosshair font-riverside-outline brightness-100 transition-all duration-300 peer-hover:brightness-110"
+                    class="peer font-riverside-outline xl:cursor-crosshair xl:brightness-100 xl:transition-all xl:duration-300 peer-hover:xl:brightness-110"
                     :class="[
                         getRandomColor(),
                         index % 2 === 0
