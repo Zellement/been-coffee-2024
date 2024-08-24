@@ -13,7 +13,8 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@nuxtjs/svg-sprite',
         '@nuxtjs/color-mode',
-        '@nuxtjs/sanity'
+        '@nuxtjs/sanity',
+        "@nuxt/icon"
     ],
 
     colorMode: {

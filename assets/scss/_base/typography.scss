@@ -74,6 +74,49 @@ strong {
     @apply font-bold;
 }
 
+.custom-link {
+    @apply text-tuscany-500;
+    background: linear-gradient(
+        to right,
+        rgba(100, 200, 200, 0),
+        rgba(100, 200, 200, 0)
+    ),
+    linear-gradient(
+        to right,
+        theme("colors.tuscany.500"),
+        theme("colors.tuscany.500")
+    );
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+
+    &:hover {
+        background-size: 0 0.1em, 100% 0.1em;
+    }
+}
+
+html.dark .custom-link {
+    @apply text-butterscotch-500;
+    background: linear-gradient(
+        to right,
+        rgba(100, 200, 200, 0),
+        rgba(100, 200, 200, 0)
+    ),
+    linear-gradient(
+        to right,
+        theme("colors.butterscotch.500"),
+        theme("colors.butterscotch.500")
+    );
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    &:hover {
+        background-size: 0 0.1em, 100% 0.1em;
+    }
+}
+
 /**
  * ----------------------
  * Rich Text / Body Copy

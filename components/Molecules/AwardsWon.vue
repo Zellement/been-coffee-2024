@@ -3,7 +3,7 @@
         <li
             v-for="award in allAwards"
             :key="award._id"
-            class="min-w-26 flex-1 flex-shrink-0 basis-1/3 flex-col items-center gap-2 p-4"
+            class="min-w-26 flex flex-shrink-0 basis-1/3 flex-col items-center gap-2 p-4 xl:flex-1"
         >
             <div class="flex-shrink-0">
                 <SanityImage

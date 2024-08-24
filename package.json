@@ -17,6 +17,7 @@
         "format:write": "npx prettier --write \"**/(*.vue|.js|.ts|.md)\""
     },
     "devDependencies": {
+        "@nuxt/icon": "^1.4.8",
         "@nuxtjs/color-mode": "^3.4.2",
         "@nuxtjs/svg-sprite": "^1.0.2",
         "@nuxtjs/tailwindcss": "^6.12.1",
