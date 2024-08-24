@@ -1,6 +1,7 @@
 <template>
     <div class="page">
         <hero-index />
+        <awards-won class="mt-16" />
         <div class="container grid-layout my-16">
             <div class="col-span-full py-16">
                 <h2

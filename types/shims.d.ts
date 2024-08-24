@@ -1,3 +1,5 @@
+import type { SanityImageAsset } from '@/types/sanity.types'
+
 declare global {
     type ImageTypes = {
         url: string
@@ -10,6 +12,14 @@ declare global {
         label: string
         url: string
         subItems?: NavItem[]
+    }
+
+    type AwardExtend = Award & {
+        logo?: {
+            asset?: {
+                [internalGroqTypeReferenceTo]?: SanityImageAsset
+            }
+        }
     }
 }
 

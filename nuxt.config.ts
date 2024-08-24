@@ -8,23 +8,20 @@ export default defineNuxtConfig({
     devServerHandlers: [],
 
     modules: [
-        // Core
         '@nuxt/image',
         '@pinia/nuxt',
-
-        // UI
         '@nuxtjs/tailwindcss',
         '@nuxtjs/svg-sprite',
-        '@nuxtjs/color-mode'
-
-        // SEO
-        // '@nuxtjs/robots',
-        // 'nuxt-gtag',
-        // '@nuxtjs/sitemap'
+        '@nuxtjs/color-mode',
+        '@nuxtjs/sanity'
     ],
 
     colorMode: {
         classSuffix: ''
+    },
+
+    sanity: {
+        projectId: 'mxklvbih'
     },
 
     svgSprite: {
