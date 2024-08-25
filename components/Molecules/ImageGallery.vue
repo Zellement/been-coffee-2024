@@ -1,12 +1,12 @@
 <template>
     <div
-        class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+        class="grid grid-cols-2 overflow-hidden sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
     >
         <div
             v-for="(image, index) in images"
             :key="index"
             :class="getMosaicClass(index)"
-            class="relative"
+            class="relative hover:z-10 hover:scale-110 hover:transition-all"
         >
             <nuxt-picture
                 :src="image"
@@ -26,24 +26,24 @@ const images = ref(
 
 const getMosaicClass = (index) => {
     const classes = [
-        'row-span-2 col-span-2',
-        'row-span-1 col-span-1',
-        'row-span-1 col-span-2',
-        'row-span-2 col-span-1',
-        'row-span-1 col-span-1',
-        'row-span-2 col-span-2',
-        'row-span-1 col-span-1',
-        'row-span-1 col-span-2',
-        'row-span-2 col-span-1',
-        'row-span-1 col-span-1',
-        'row-span-2 col-span-2',
-        'row-span-1 col-span-1',
-        'row-span-1 col-span-2',
-        'row-span-2 col-span-1',
-        'row-span-1 col-span-1',
-        'row-span-2 col-span-2',
-        'row-span-1 col-span-1',
-        'row-span-1 col-span-2'
+        'sm:row-span-2 sm:col-span-2 col-span-full',
+        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-1 sm:col-span-2 col-span-full',
+        'sm:row-span-2 sm:col-span-1 col-span-full',
+        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-2 sm:col-span-2 col-span-full',
+        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-1 sm:col-span-2 col-span-full',
+        'sm:row-span-2 sm:col-span-1 col-span-full',
+        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-2 sm:col-span-2 col-span-full',
+        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-1 sm:col-span-2 col-span-full',
+        'sm:row-span-2 sm:col-span-1 col-span-full',
+        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-2 sm:col-span-2 col-span-full',
+        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-1 sm:col-span- col-span-full2'
     ]
     return classes[index % classes.length]
 }
