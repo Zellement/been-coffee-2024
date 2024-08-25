@@ -1,5 +1,7 @@
 <template>
-    <div class="relative font-riverside text-[10vw]/[10vw]">
+    <div
+        class="relative font-riverside text-[14vw]/[14vw] lg:text-[10vw]/[10vw]"
+    >
         <h1
             class="text-gradient--navy-darkNavy dark:text-gradient--butterscotch-tuscany"
         >

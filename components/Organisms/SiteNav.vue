@@ -52,7 +52,7 @@ const navigation: NavItem[] = [
     {
         key: 'find-us',
         label: 'Find Us',
-        url: '/where/'
+        url: '/where'
     },
     {
         key: 'team',
@@ -62,12 +62,12 @@ const navigation: NavItem[] = [
     {
         key: 'bookings',
         label: 'Bookings',
-        url: '/bookings/'
+        url: '/bookings'
     },
     {
         key: 'contact',
         label: 'Contact',
-        url: '/contact/'
+        url: '/contact'
     }
 ]
 </script>
