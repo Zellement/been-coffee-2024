@@ -57,7 +57,7 @@ const navigation: NavItem[] = [
     {
         key: 'team',
         label: 'Team',
-        url: '/team/'
+        url: '/team'
     },
     {
         key: 'bookings',

@@ -24,13 +24,16 @@
         <div class="container container-px container--sm text-center">
             <p>
                 We offer a variety of both food and drink options, including
-                thick cut butcher bacon &amp; Philadelphia bagels, award-winning
-                sausage cobs, ham &amp; cheese paninis, handmade sausage rolls
-                and traditional scotch eggs.
+                thick cut butcher
+                <strong>bacon &amp; Philadelphia bagels</strong>, award-winning
+                <strong>sausage cobs</strong>,
+                <strong>ham &amp; cheese paninis</strong>,
+                <strong>handmade sausage rolls</strong> and traditional
+                <strong>scotch eggs</strong>.
             </p>
         </div>
         <div
-            class="my-16 grid grid-cols-2 gap-2 overflow-hidden lg:grid-cols-4"
+            class="my-16 grid grid-cols-2 gap-2 overflow-hidden py-8 lg:grid-cols-4"
         >
             <div
                 v-for="(item, index) in media"
@@ -105,8 +108,11 @@
                     greener future.
                 </p>
             </div>
-            <div class="h-full overflow-hidden">
-                <nuxt-picture src="/img/cans2.jpeg" alt="Cans and bottles" />
+            <div class="h-full rotate-1 overflow-hidden">
+                <nuxt-picture
+                    src="/img/cans2.jpeg"
+                    alt="Karma cans on a shelf"
+                />
             </div>
             <div class="flex items-end">
                 <p>

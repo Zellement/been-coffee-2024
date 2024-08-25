@@ -1,4 +1,4 @@
-import type { SanityImageAsset } from '@/types/sanity.types'
+import type { SanityImageAsset, TeamMember } from '@/types/sanity.types'
 
 declare global {
     type ImageTypes = {
@@ -16,6 +16,14 @@ declare global {
 
     type AwardExtend = Award & {
         logo?: {
+            asset?: {
+                [internalGroqTypeReferenceTo]?: SanityImageAsset
+            }
+        }
+    }
+
+    type TeamMemberExtend = TeamMember & {
+        image?: {
             asset?: {
                 [internalGroqTypeReferenceTo]?: SanityImageAsset
             }
