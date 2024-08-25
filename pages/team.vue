@@ -8,7 +8,9 @@
                 totally random order each time.
             </p>
         </div>
-        <team-members />
+        <div class="container">
+            <team-members />
+        </div>
     </div>
 </template>
 

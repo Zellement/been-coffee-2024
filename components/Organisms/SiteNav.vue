@@ -65,6 +65,11 @@ const navigation: NavItem[] = [
         url: '/bookings'
     },
     {
+        key: 'gallery',
+        label: 'Gallery',
+        url: '/gallery'
+    },
+    {
         key: 'contact',
         label: 'Contact',
         url: '/contact'
