@@ -8,25 +8,7 @@
                 to you as soon as possible.
             </p>
         </div>
-        <form
-            name="Website Booking Form"
-            method="post"
-            action="/success"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-        >
-            <input type="text" name="name" placeholder="Name" required />
-            <input
-                type="hidden"
-                name="form-name"
-                value="Website Contact Form"
-            />
-            <p hidden>
-                <label>Don’t fill this out: <input name="bot-field" /></label>
-            </p>
-
-            <!-- Add your form inputs here -->
-        </form>
+        <form-table-booking />
     </div>
 </template>
 

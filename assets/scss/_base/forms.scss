@@ -1,0 +1,18 @@
+form {
+  input, textarea {
+    @apply bg-seashell dark:bg-navy dark:text-white;
+    &:after {
+      @apply text-white;
+    }
+
+  }
+  label {
+    @apply flex flex-col;
+  }
+}
+
+html.dark {
+  input, textarea {
+    color-scheme: dark;
+  }
+}
