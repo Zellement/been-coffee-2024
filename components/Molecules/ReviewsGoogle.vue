@@ -4,7 +4,7 @@
             v-if="googleReviewData"
             class="overflow-hidden px-2 md:px-4 xl:px-6"
         >
-            <div class="w-full overflow-x-scroll py-8">
+            <div class="custom-scrollbar w-full overflow-x-scroll py-8">
                 <div class="flex w-full flex-row space-x-4">
                     <template v-for="item in googleReviewData" :key="item.id">
                         <review-card :review="item" />
