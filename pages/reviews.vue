@@ -12,8 +12,9 @@
                 <p>Here's some of our reviews from Google and Tripadvisor.</p>
             </div>
         </div>
-        <div class="container">
+        <div class="container container-px flex flex-col gap-16">
             <reviews-google />
+            <reviews-tripadvisor />
         </div>
     </div>
 </template>

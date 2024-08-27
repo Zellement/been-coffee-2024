@@ -47,7 +47,6 @@ export const useReviewsStore = defineStore('reviews', {
             }
         },
         async fetchAllReviews() {
-            console.log('Fetching all reviews')
             this.fetchTripAdvisorReviews()
             this.fetchGoogleReviews()
         }
