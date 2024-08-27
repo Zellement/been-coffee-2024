@@ -19,6 +19,7 @@
     "devDependencies": {
         "@nuxt/icon": "^1.4.8",
         "@nuxtjs/color-mode": "^3.4.2",
+        "@nuxtjs/supabase": "^1.1.5",
         "@nuxtjs/svg-sprite": "^1.0.2",
         "@nuxtjs/tailwindcss": "^6.12.1",
         "@tailwindcss/container-queries": "^0.1.1",
@@ -37,6 +38,7 @@
         "sass": "^1.77.8",
         "stylelint": "^16.7.0",
         "stylelint-config-standard-scss": "^13.1.0",
+        "supabase": "^1.190.0",
         "typescript": "^5.5.4",
         "vite-plugin-eslint": "^1.8.1",
         "vue-tsc": "^2.0.29"
@@ -53,6 +55,7 @@
         "esbuild": "^0.23.0",
         "nuxt-gtag": "^2.1.0",
         "pinia": "^2.2.0",
+        "serpapi": "^2.1.0",
         "vue-dompurify-html": "^5.1.0",
         "vue3-mq": "^3.2.0"
     }

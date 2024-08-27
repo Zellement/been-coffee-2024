@@ -14,11 +14,16 @@ export default defineNuxtConfig({
         '@nuxtjs/svg-sprite',
         '@nuxtjs/color-mode',
         '@nuxtjs/sanity',
-        "@nuxt/icon"
+        '@nuxt/icon',
+        '@nuxtjs/supabase'
     ],
 
     colorMode: {
         classSuffix: ''
+    },
+
+    supabase: {
+        redirect: false
     },
 
     sanity: {

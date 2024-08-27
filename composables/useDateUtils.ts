@@ -63,9 +63,10 @@ export const useDateUtils = () => {
      * @returns {string} - 04/01/2024
      */
     const shortDateConverter = (date: Date): string => {
-        const d = date.getDate()
-        const m = date.getMonth()
-        const y = date.getFullYear()
+        const thisDate = new Date(date)
+        const d = thisDate.getDate()
+        const m = thisDate.getMonth()
+        const y = thisDate.getFullYear()
         return `${d <= 9 ? '0' + d : d}/${m <= 9 ? '0' + (m + 1) : m + 1}/${y}`
     }
 

@@ -50,6 +50,11 @@ const navigation: NavItem[] = [
         url: '/'
     },
     {
+        key: 'reviews',
+        label: 'Reviews',
+        url: '/reviews'
+    },
+    {
         key: 'find-us',
         label: 'Find Us',
         url: '/where'
