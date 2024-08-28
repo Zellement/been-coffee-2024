@@ -15,12 +15,7 @@
                 </nuxt-link>
             </li>
             <li>
-                <button
-                    @click="uiStore.toggleMobileNav(false)"
-                    @click.prevent="scrollToFooter"
-                >
-                    Find us
-                </button>
+                <button @click.prevent="scrollToFooter">Find us</button>
             </li>
         </ul>
     </nav>
@@ -74,6 +69,7 @@ const navigation: NavItem[] = [
 
 const siteFooterDiv: Ref<null | HTMLElement> = ref(null)
 const scrollToFooter = () => {
+    uiStore.toggleMobileNav(false)
     if (siteFooterDiv.value) {
         siteFooterDiv.value.scrollIntoView({ behavior: 'smooth' })
     }
