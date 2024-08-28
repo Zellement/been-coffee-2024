@@ -64,9 +64,9 @@
             </ul>
             <p class="mx-auto max-w-screen-sm">
                 We've spent countless hours searching for excellent vegan and
-                low-gluten options that we're now proud to offer to you,
-                including many cakes, all our bagels come as low-gluten options
-                and we have a handmade vegan sausage roll.
+                low-gluten options that we're now proud to offer to you. We
+                offer low-gluten bagels and paninis, vegan sausage rolls and
+                many of our cakes are both vegan and low-gluten.
             </p>
         </div>
         <div class="container group my-16 flex w-full flex-col gap-8">
@@ -89,7 +89,7 @@
             </div>
         </div>
         <double-title
-            class="container container-px grid-layout mt-8 xl:mt-16"
+            class="container container-px mt-8 xl:mt-16"
             left="Doing our bit"
             right="for the environment."
         />

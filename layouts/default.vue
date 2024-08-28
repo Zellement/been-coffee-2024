@@ -8,8 +8,9 @@
             >
                 <div class="polygon-clip-mask--bl h-full w-full">
                     <nuxt-picture
-                        :src="bgImage"
+                        src="/img/pattern.png"
                         class="h-full w-full object-cover"
+                        :class="bgImageClasses"
                         alt="Navy pattern"
                     />
                 </div>
@@ -18,7 +19,7 @@
         <main>
             <slot />
         </main>
-        <!-- <site-footer /> -->
+        <site-footer />
     </div>
 </template>
 
@@ -27,9 +28,9 @@ const colorMode = useColorMode()
 
 const currentColorMode = computed(() => colorMode.value)
 
-const bgImage: ComputedRef<string> = computed(() => {
+const bgImageClasses: ComputedRef<string> = computed(() => {
     return currentColorMode.value === 'dark'
-        ? '/img/pattern-navy.jpg'
-        : '/img/pattern-cream.jpg'
+        ? 'opacity-60'
+        : 'opacity-10 sepia-[1.2]'
 })
 </script>

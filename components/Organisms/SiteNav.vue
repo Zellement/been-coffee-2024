@@ -31,6 +31,9 @@
                     </li>
                 </ul> -->
             </li>
+            <li>
+                <button @click.prevent="scrollToFooter">Find us</button>
+            </li>
         </ul>
     </nav>
 </template>
@@ -54,11 +57,11 @@ const navigation: NavItem[] = [
         label: 'Reviews',
         url: '/reviews'
     },
-    {
-        key: 'find-us',
-        label: 'Find Us',
-        url: '/where'
-    },
+    // {
+    //     key: 'find-us',
+    //     label: 'Find Us',
+    //     url: '/where'
+    // },
     {
         key: 'team',
         label: 'Team',
@@ -80,4 +83,16 @@ const navigation: NavItem[] = [
         url: '/contact'
     }
 ]
+
+const siteFooterDiv: Ref<null | HTMLElement> = ref(null)
+const scrollToFooter = () => {
+    if (siteFooterDiv.value) {
+        siteFooterDiv.value.scrollIntoView({ behavior: 'smooth' })
+    }
+}
+
+onMounted(() => {
+    const footer = document.getElementById('site-footer')
+    siteFooterDiv.value = footer
+})
 </script>

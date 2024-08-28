@@ -8,7 +8,9 @@
                 to you as soon as possible.
             </p>
         </div>
-        <form-table-booking />
+        <div class="container container-px">
+            <form-table-booking />
+        </div>
     </div>
 </template>
 
