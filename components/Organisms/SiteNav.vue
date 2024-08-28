@@ -13,26 +13,14 @@
                 >
                     {{ navItem.label }}
                 </nuxt-link>
-                <!-- <ul
-                    v-if="navItem.subItems && navItem.subItems.length > 0"
-                    class="z-10 flex flex-col bg-gray-100 p-4 lg:absolute lg:right-0 lg:top-full lg:z-20 lg:hidden lg:w-[300px] lg:text-right lg:group-hover:block"
-                >
-                    <li
-                        v-for="subItem in navItem.subItems"
-                        :key="subItem.key"
-                        class="ml-4 lg:m-0"
-                    >
-                        <nuxt-link
-                            :to="subItem.url"
-                            @click="uiStore.toggleMobileNav(false)"
-                        >
-                            {{ subItem.label }}
-                        </nuxt-link>
-                    </li>
-                </ul> -->
             </li>
             <li>
-                <button @click.prevent="scrollToFooter">Find us</button>
+                <button
+                    @click="uiStore.toggleMobileNav(false)"
+                    @click.prevent="scrollToFooter"
+                >
+                    Find us
+                </button>
             </li>
         </ul>
     </nav>
