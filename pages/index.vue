@@ -201,4 +201,16 @@ const getRandomColor = () => {
     lastColor = randomColor
     return randomColor
 }
+
+useHead({
+    title: 'Been Coffee | Award-winning coffee shop near Derby & Willington',
+    meta: [
+        {
+            hid: 'description',
+            name: 'description',
+            content:
+                'Been Coffee is an independent, award-winning coffee shop with amazing coffee, tea, bubble tea, boba tea, cakes, bagels, cobs & paninis near Derby & Willington, UK'
+        }
+    ]
+})
 </script>

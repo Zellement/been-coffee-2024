@@ -19,4 +19,15 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+    title: 'Reviews | Been Coffee',
+    meta: [
+        {
+            hid: 'description',
+            name: 'description',
+            content: 'See our recent reviews from Google and Tripadvisor'
+        }
+    ]
+})
+</script>

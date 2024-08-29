@@ -15,8 +15,8 @@ const reviewsStore = useReviewsStore()
 // Computed
 -------------------------- */
 
-const isMobileNavActive: ComputedRef<boolean> = computed(() => {
-    return uiStore.showMobileNav
+const isModalActive: ComputedRef<boolean> = computed(() => {
+    return uiStore.showMobileNav || uiStore.showModalGoodeats
 })
 
 /* --------------------------
@@ -31,7 +31,7 @@ useHead({
     // Prevent page scrolling when mobile nav is open
     bodyAttrs: {
         class: computed((): string => {
-            if (isMobileNavActive.value) return 'overflow-hidden'
+            if (isModalActive.value) return 'overflow-hidden'
             return ''
         })
     }

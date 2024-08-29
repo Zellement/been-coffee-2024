@@ -8,11 +8,15 @@
             >
                 <nuxt-link
                     :to="navItem.url"
-                    class="leading-none"
+                    class="mr-4 leading-none"
                     @click="uiStore.toggleMobileNav(false)"
                 >
                     {{ navItem.label }}
                 </nuxt-link>
+                <span
+                    aria-hidden="true"
+                    class="absolute right-0 top-1/2 h-1 w-1 -translate-y-1/2 bg-tuscany"
+                />
             </li>
             <li>
                 <button @click.prevent="scrollToFooter">Find us</button>
@@ -34,6 +38,11 @@ const navigation: NavItem[] = [
         key: 'about',
         label: 'About',
         url: '/'
+    },
+    {
+        key: 'order',
+        label: 'Order Online',
+        url: '/order'
     },
     {
         key: 'reviews',

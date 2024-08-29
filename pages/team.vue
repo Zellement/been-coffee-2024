@@ -14,4 +14,16 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+    title: 'Meet the team | Been Coffee',
+    meta: [
+        {
+            hid: 'description',
+            name: 'description',
+            content:
+                'Meet the team behind Been Coffee in Willington near Derby, UK'
+        }
+    ]
+})
+</script>

@@ -37,7 +37,7 @@
                     </div>
                     <site-nav
                         class="mt-8 lg:mt-0 lg:w-full"
-                        ul-classes="flex gap-2 flex-col lg:flex-row lg:gap-4 lg:justify-end text-3xl lg:text-base"
+                        ul-classes="flex gap-2 flex-col lg:flex-row lg:gap-3 lg:justify-end text-3xl lg:text-base"
                     />
                 </div>
             </div>
