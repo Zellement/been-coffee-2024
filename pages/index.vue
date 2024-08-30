@@ -14,10 +14,10 @@
                 </h3>
             </div>
         </double-title>
-        <intro-index />
+        <intro-index class="" />
         <awards-won class="mt-16" />
         <double-title
-            class="container container-px container--md grid-layout mt-8 xl:mt-16"
+            class="container container-px container--lg grid-layout mt-8 xl:mt-16"
             left="Bagels, bacon"
             right="& brownies."
         />
@@ -33,14 +33,14 @@
             </p>
         </div>
         <div
-            class="my-16 grid grid-cols-2 gap-2 overflow-hidden py-8 lg:grid-cols-4"
+            class="fade-in my-16 grid grid-cols-2 gap-2 overflow-hidden py-8 lg:grid-cols-4"
         >
             <div
                 v-for="(item, index) in media"
                 :key="index"
                 :class="['relative', item.class]"
             >
-                <nuxt-picture :src="item.src" :alt="item.alt" />
+                <nuxt-picture class="" :src="item.src" :alt="item.alt" />
                 <span
                     class="absolute bottom-0 right-2 font-krete text-[12px] text-white"
                 >
@@ -76,7 +76,7 @@
                 <h3
                     v-for="(item, index) in menuItems"
                     :key="item + index"
-                    class="peer font-riverside-outline xl:cursor-crosshair xl:brightness-100 xl:transition-all xl:duration-300 peer-hover:xl:brightness-110"
+                    class="fade-in peer font-riverside-outline xl:cursor-crosshair xl:brightness-100 xl:transition-all xl:duration-300 peer-hover:xl:brightness-110"
                     :class="[
                         getRandomColor(),
                         index % 2 === 0
@@ -108,10 +108,11 @@
                     greener future.
                 </p>
             </div>
-            <div class="h-full rotate-1 overflow-hidden">
+            <div class="fade-in h-full rotate-1 overflow-hidden">
                 <nuxt-picture
                     src="/img/cans2.jpeg"
                     alt="Karma cans on a shelf"
+                    class=""
                 />
             </div>
             <div class="flex items-end">

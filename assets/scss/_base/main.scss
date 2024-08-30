@@ -121,8 +121,3 @@ picture img {
         transform: scaleX(1)
     }
 }
-
-#progress {
-    animation: grow-progress linear forwards;
-    animation-timeline: scroll();
-}

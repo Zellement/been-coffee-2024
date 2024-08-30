@@ -99,6 +99,11 @@ export default defineNuxtConfig({
                     type: 'image/x-icon',
                     href: '/favicon.png'
                 }
+            ],
+            script: [
+                {
+                    src: 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js'
+                }
             ]
         },
         pageTransition: { name: 'page', mode: 'out-in' }
