@@ -14,7 +14,7 @@
                 </h3>
             </div>
         </double-title>
-        <intro-index class="" />
+        <index-intro class="" />
         <awards-won class="mt-16" />
         <double-title
             class="container container-px container--lg grid-layout mt-8 xl:mt-16"
@@ -123,6 +123,19 @@
                     ingredients and reduce the amount of non-recyclable waste we
                     were producing.
                 </p>
+            </div>
+            <div
+                class="col-span-full mt-16 flex flex-wrap items-center justify-center gap-4"
+            >
+                <nuxt-link to="/order" class="btn">
+                    Order for collection
+                </nuxt-link>
+                <nuxt-link to="/team" class="btn">
+                    Meet your Been team
+                </nuxt-link>
+                <nuxt-link to="/gallery" class="btn">
+                    See our gallery
+                </nuxt-link>
             </div>
         </div>
     </div>

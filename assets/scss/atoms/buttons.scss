@@ -1,5 +1,24 @@
 .btn {
-    @apply relative px-3 py-1 bg-navy dark:bg-tuscany rounded text-white transition-colors duration-300;
+    @apply px-6 py-1 font-krete text-base rounded text-current border-current transition-colors duration-300 border relative;
+
+    &:after {
+        content: '';
+        @apply absolute top-1/2 -translate-y-1/2 left-2;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-right: 6px solid theme('colors.tuscany.500');
+        border-bottom: 6px solid transparent;
+    }
+    &:before {
+        content: '';
+        @apply absolute top-1/2 -translate-y-1/2 right-2 rotate-180;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-right: 6px solid theme('colors.tuscany.500');
+        border-bottom: 6px solid transparent;
+    }
 
     &:hover {
         @apply bg-butterscotch-500 text-navy;

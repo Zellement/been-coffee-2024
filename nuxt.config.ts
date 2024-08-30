@@ -109,9 +109,17 @@ export default defineNuxtConfig({
         pageTransition: { name: 'page', mode: 'out-in' }
     },
 
-    runtimeConfig: {
-        public: {}
-    },
+    // runtimeConfig: {
+    //     sanity: {
+    //         token: process.env.SANITY_API
+    //     },
+    //     public: {
+    //         WEBSITE_URL: process.env.WEBSITE_URL,
+    //         MARKER_ID: process.env.MARKER_ID,
+    //         MARKER_ENABLED: process.env.MARKER_ENABLED,
+    //         COOKIE_YES_ID: process.env.COOKIE_YES_ID
+    //     }
+    // },
 
     vite: {
         plugins: [

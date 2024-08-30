@@ -3,6 +3,7 @@
   animation-timeline: scroll();
 }
 
+@screen lg {
 @keyframes anim-header-top {
   from {
       @apply text-butterscotch-500;
@@ -47,5 +48,6 @@
 
 .fade-in {
   animation: fade-in linear forwards;
-  animation-timeline: view(block 50% -100px);
+  animation-timeline: view(block 80vh -100px);
+}
 }

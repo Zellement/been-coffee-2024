@@ -1,12 +1,12 @@
 <template>
     <div
-        class="grid grid-cols-2 overflow-hidden sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+        class="grid grid-cols-2 overflow-clip sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
     >
         <div
             v-for="(image, index) in images"
             :key="index"
             :class="getMosaicClass(index)"
-            class="relative hover:z-10 hover:scale-110 hover:transition-all"
+            class="fade-in"
         >
             <nuxt-picture
                 :src="image"

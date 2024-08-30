@@ -10,7 +10,7 @@
                     <nuxt-picture
                         src="/img/pattern.png"
                         class="h-full w-full object-cover"
-                        :class="bgImageClasses"
+                        :style="bgImageClasses"
                         alt="Navy pattern"
                     />
                 </div>
@@ -30,7 +30,7 @@ const currentColorMode = computed(() => colorMode.value)
 
 const bgImageClasses: ComputedRef<string> = computed(() => {
     return currentColorMode.value === 'dark'
-        ? 'opacity-60'
-        : 'opacity-10 sepia-[1.2]'
+        ? 'filter: invert(22%) sepia(11%) saturate(3462%) hue-rotate(198deg) brightness(94%) contrast(92%); opacity: 0.6;'
+        : 'filter: invert(45%) sepia(93%) saturate(428%) hue-rotate(330deg) brightness(82%) contrast(98%); opacity: 0.2;'
 })
 </script>

@@ -5,19 +5,17 @@
     >
         <div class="relative h-full w-full p-8 md:p-16 xl:p-32">
             <div
-                class="absolute left-1/2 top-1/2 z-[100] flex h-11/12 w-11/12 max-w-screen-xl -translate-x-1/2 -translate-y-1/2 bg-black/80 backdrop-blur"
+                class="absolute left-1/2 top-1/2 z-[100] flex h-11/12 w-11/12 max-w-screen-xl -translate-x-1/2 -translate-y-1/2 bg-butterscotch-500 backdrop-blur dark:bg-navy-500/80"
             >
                 <div
                     class="text-sm relative flex h-full w-full flex-col rounded-lg"
                 >
                     <button
-                        class="btn flex cursor-pointer items-center justify-center p-2"
-                        aria-hidden="true"
+                        class="btn m-2 flex cursor-pointer items-center justify-center self-end p-2"
+                        aria-label="Close modal"
                         @click.prevent="toggleModalGoodeats"
                     >
                         <svg-icon name="ui/cross" class="h-8 w-8" />
-
-                        Close
                     </button>
                     <iframe
                         src="https://goodeats.io/beencoffee?embed_outlet=beencoffee"

@@ -10,7 +10,7 @@
             <div class="container grid-layout container-padding py-8">
                 <div class="col-span-full p-4 xl:col-span-4">
                     <div
-                        class="mb-8 flex w-full flex-row justify-center gap-2 font-riverside leading-none lg:justify-start"
+                        class="mb-8 flex w-full flex-row justify-center gap-2 font-riverside leading-none lg:justify-start lg:gap-10"
                     >
                         <p class="flex flex-col">
                             <span class="text-base text-tuscany">Just off</span
