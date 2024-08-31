@@ -2,11 +2,13 @@
     <div class="page pb-16">
         <hero-index />
         <double-title
-            class="container container-px grid-layout mb-8 mt-12 xl:my-16"
+            class="container container-px grid-layout mb-12 mt-12 xl:my-16"
             left="Award winning."
             right="Fully independent."
+            :disable-anims="true"
+            left-classes="lg:anim-header-top"
         >
-            <div class="flex">
+            <div class="mt-16 flex">
                 <h3
                     class="mx-auto inline-flex flex-col self-center border-l border-r border-current px-4 text-center font-krete uppercase tracking-wider"
                 >
@@ -20,6 +22,7 @@
             class="container container-px container--lg grid-layout mt-8 xl:mt-16"
             left="Bagels, bacon"
             right="& brownies."
+            left-classes="anim-header-top"
         />
         <div class="container container-px container--sm text-center">
             <p>
@@ -33,11 +36,12 @@
             </p>
         </div>
         <div
-            class="fade-in my-16 grid grid-cols-2 gap-2 overflow-hidden py-8 lg:grid-cols-4"
+            class="my-16 grid grid-cols-2 gap-2 overflow-clip py-8 lg:grid-cols-4"
         >
             <div
                 v-for="(item, index) in media"
                 :key="index"
+                class="reveal-from-sides"
                 :class="['relative', item.class]"
             >
                 <nuxt-picture class="" :src="item.src" :alt="item.alt" />
@@ -76,7 +80,7 @@
                 <h3
                     v-for="(item, index) in menuItems"
                     :key="item + index"
-                    class="fade-in peer font-riverside-outline xl:cursor-crosshair xl:brightness-100 xl:transition-all xl:duration-300 peer-hover:xl:brightness-110"
+                    class="peer font-riverside-outline xl:cursor-crosshair xl:brightness-100 xl:transition-all xl:duration-300 peer-hover:xl:brightness-110"
                     :class="[
                         getRandomColor(),
                         index % 2 === 0
@@ -92,6 +96,7 @@
             class="container container-px mt-8 xl:mt-16"
             left="Doing our bit"
             right="for the environment."
+            left-classes="anim-header-top"
         />
         <div
             class="container container-px container--sm lg:container--lg flex flex-col gap-8 text-center lg:grid lg:grid-cols-3 lg:text-left"
@@ -108,7 +113,7 @@
                     greener future.
                 </p>
             </div>
-            <div class="fade-in h-full rotate-1 overflow-hidden">
+            <div class="reveal-from-sides h-full rotate-1 overflow-hidden">
                 <nuxt-picture
                     src="/img/cans2.jpeg"
                     alt="Karma cans on a shelf"

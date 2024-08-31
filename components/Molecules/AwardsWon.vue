@@ -5,7 +5,7 @@
             :key="award._id"
             class="min-w-26 flex flex-shrink-0 basis-1/3 flex-col items-center gap-2 p-4 xl:flex-1"
         >
-            <div class="flex-shrink-0">
+            <div class="reveal-from-sides flex-shrink-0">
                 <SanityImage
                     v-if="award.logo?.asset"
                     :asset-id="`${award?.logo?.asset._ref}`"

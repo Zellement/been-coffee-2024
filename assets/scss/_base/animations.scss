@@ -3,51 +3,68 @@
   animation-timeline: scroll();
 }
 
-@screen lg {
-@keyframes anim-header-top {
-  from {
-      @apply text-butterscotch-500;
-      transform: translateY(-2rem); 
+@layer utilities {
+  @keyframes anim-header-top {
+    from {
+        @apply text-butterscotch-500;
+        transform: translateY(-5%); 
+    }
+    100% {
+        @apply text-tuscany-500;
+        transform: translateY(100%);
+    }
   }
-  100% {
-      @apply text-tuscany-500;
-      transform: translateY(4rem);
-  }
-}
 
 
-@keyframes anim-header-bottom {
-  from {
-      transform: translateY(0rem); 
+  @keyframes anim-header-bottom {
+    from {
+        transform: translateY(0rem); 
+    }
+    100% {
+        transform: translateY(-6rem);
+    }
   }
-  100% {
-      transform: translateY(-6rem);
+
+  .anim-header-top {
+    animation: anim-header-top linear forwards;
+    animation-timeline: view(block 30% 30%);
   }
-}
 
-.anim-header-top {
-  animation: anim-header-top linear forwards;
-  animation-timeline: view();
-}
+  // .anim-header-bottom {
+  //   animation: anim-header-bottom linear forwards;
+  //   animation-timeline: view(block 0px -100px);
+  // }
 
-.anim-header-bottom {
-  animation: anim-header-bottom linear forwards;
-  animation-timeline: view(block 0px -100px);
-}
-
-@keyframes fade-in {
-  from {
-    @apply opacity-0;
-    transform: translateY(4rem)
+  @keyframes fade-in {
+    from {
+      @apply opacity-0;
+      transform: translateY(4rem)
+    }
+    to {
+      @apply opacity-100;
+      transform: translateY(0)
+    }
   }
-  to {
-    @apply opacity-100;
-    transform: translateY(0)
-  }
-}
 
-.fade-in {
-  animation: fade-in linear forwards;
-  animation-timeline: view(block 80vh -100px);
-}
+  .fade-in {
+    animation: fade-in linear forwards;
+    animation-timeline: view(block 80vh -100px);
+  }
+
+  @keyframes reveal-from-sides {
+    0% {
+      scale: 0.8;
+      clip-path: polygon(84% 0, 83% 0, 48% 100%, 47% 100%);
+    }
+    100% { 
+      scale: 1;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+     }
+  }
+
+  .reveal-from-sides {
+    animation: reveal-from-sides linear forwards;
+    animation-timeline: view(block);
+    animation-range: entry-crossing 0% contain 50%;
+  }
 }

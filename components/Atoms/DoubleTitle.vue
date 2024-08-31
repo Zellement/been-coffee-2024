@@ -4,13 +4,15 @@
             <h2 class="">
                 <span
                     v-if="left"
-                    class="anim-header-top block font-riverside text-[11vw]/[10vw] text-butterscotch dark:text-butterscotch xl:text-[8vw] xl:leading-[6vw] max:text-[160px]/[120px]"
+                    class="block font-riverside text-[11vw]/[10vw] text-butterscotch dark:text-butterscotch xl:text-[8vw] xl:leading-[6vw] max:text-[160px]/[120px]"
+                    :class="leftClasses"
                 >
                     {{ left }}
                 </span>
                 <span
                     v-if="right"
-                    class="anim-header-bottom block -translate-y-[3vw] text-right font-riverside-outline text-[11vw]/[10vw] dark:text-white xl:text-[8vw] xl:leading-[6vw] max:text-[170px]/[120px]"
+                    class="block -translate-y-[3vw] text-right font-riverside-outline text-[11vw]/[10vw] dark:text-white xl:text-[8vw] xl:leading-[6vw] max:text-[170px]/[120px]"
+                    :class="rightClasses"
                 >
                     {{ right }}
                 </span>
@@ -24,6 +26,8 @@
 interface Props {
     left: string | null
     right: string | null
+    leftClasses?: string | null
+    rightClasses?: string | null
 }
 
 defineProps<Props>()
