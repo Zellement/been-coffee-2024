@@ -11,6 +11,7 @@
                     :asset-id="`${award?.logo?.asset._ref}`"
                     auto="format"
                     h="80"
+                    :alt="award.shortName"
                     w="80"
                     fit="fillmax"
                     class="flex-shrink-0"

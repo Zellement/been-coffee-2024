@@ -1,6 +1,6 @@
 <template>
     <div class="container grid grid-cols-12">
-        <div class="relative col-span-6 col-start-1 -row-start-1">
+        <div class="relative z-10 col-span-6 col-start-1 -row-start-1">
             <h1
                 :class="spanClasses"
                 class="text-gradient--tuscany-butterscotch dark:text-gradient--navy-darkNavy font-riverside text-butterscotch dark:text-navy-400"
@@ -18,9 +18,13 @@
             </span>
         </div>
         <div
-            class="col-span-10 col-start-3 row-start-1 xl:col-span-8 xl:col-start-5 xl:aspect-landscape"
+            class="img-clip col-span-10 col-start-3 row-start-1 aspect-[580/386] xl:col-span-8 xl:col-start-5 xl:aspect-landscape"
         >
-            <nuxt-picture src="/img/shop-exterior.jpeg" alt="Shop exterior" />
+            <nuxt-picture
+                src="/img/shop-exterior.jpeg"
+                class=""
+                alt="Shop exterior"
+            />
         </div>
     </div>
 </template>

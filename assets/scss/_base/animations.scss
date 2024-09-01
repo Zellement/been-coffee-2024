@@ -35,6 +35,22 @@
   //   animation-timeline: view(block 0px -100px);
   // }
 
+
+  @keyframes gallery-img-in {
+    from {
+      transform: translateY(4rem)
+    }
+    to {
+      transform: translateY(0)
+    }
+  }
+
+  .gallery-img-in {
+    animation: gallery-img-in linear forwards;
+    animation-timeline: view(block 80vh -100px);
+    animation-range: entry-crossing 0% contain 50%;
+  }
+
   @keyframes fade-in {
     from {
       @apply opacity-0;
@@ -50,6 +66,8 @@
     animation: fade-in linear forwards;
     animation-timeline: view(block 80vh -100px);
   }
+
+  // Reveal
 
   @keyframes reveal-from-sides {
     0% {
@@ -68,3 +86,5 @@
     animation-range: entry-crossing 0% contain 50%;
   }
 }
+
+

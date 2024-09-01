@@ -37,17 +37,18 @@
                 />
             </div>
         </div>
-        <div class="">
+
+        <template v-if="$slots.default">
             <button
-                class="my-4 self-start text-xs underline"
+                class="my-4 self-start text-xs underline underline-offset-2"
                 @click.prevent="showDetails = !showDetails"
             >
-                Toggle Details
+                Toggle Feedback
             </button>
             <div v-if="showDetails" class="text-xs">
                 <slot />
             </div>
-        </div>
+        </template>
     </div>
 </template>
 

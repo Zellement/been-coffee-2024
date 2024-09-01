@@ -16,24 +16,30 @@
                 <div class="flex w-full flex-row space-x-4">
                     <template v-for="item in googleReviewData" :key="item.id">
                         <review-card
-                            :snippet="item.snippet"
                             :name="item.user.name"
                             :date="item.date"
                             :rating="item.rating"
                         >
-                            {{ item.snippet }}
-
-                            <ul class="mt-4">
-                                <li v-if="item?.details?.food">
-                                    Food: {{ item?.details?.food }}
-                                </li>
-                                <li v-if="item?.details?.service">
-                                    Service: {{ item?.details?.service }}
-                                </li>
-                                <li v-if="item?.details?.atmosphere">
-                                    Atmosphere: {{ item?.details?.atmosphere }}
-                                </li>
-                            </ul>
+                            <template v-if="item.snippet || item.details">
+                                <template v-if="item.snippet">
+                                    {{ item.snippet }}
+                                </template>
+                                <template v-if="item?.details">
+                                    <ul class="mt-4">
+                                        <li v-if="item?.details?.food">
+                                            Food: {{ item?.details?.food }}
+                                        </li>
+                                        <li v-if="item?.details?.service">
+                                            Service:
+                                            {{ item?.details?.service }}
+                                        </li>
+                                        <li v-if="item?.details?.atmosphere">
+                                            Atmosphere:
+                                            {{ item?.details?.atmosphere }}
+                                        </li>
+                                    </ul>
+                                </template>
+                            </template>
                         </review-card>
                     </template>
                 </div>
