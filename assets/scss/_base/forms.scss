@@ -1,6 +1,6 @@
 form {
-  input, textarea {
-    @apply bg-seashell dark:bg-navy dark:text-white;
+  input[type='text'], input[type='email'], input[type='datetime-local'], input[type='number'], textarea {
+    @apply bg-white dark:bg-navy rounded dark:text-white;
     &:after {
       @apply text-white;
     }

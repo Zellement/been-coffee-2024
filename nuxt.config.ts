@@ -1,6 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import eslintVitePlugin from 'vite-plugin-eslint'
-import { fileURLToPath } from 'url'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -16,11 +15,16 @@ export default defineNuxtConfig({
         '@nuxtjs/sanity',
         '@nuxt/icon',
         '@nuxtjs/supabase',
-        '@nuxtjs/seo'
+        '@nuxtjs/seo',
+        'nuxt-gtag'
     ],
 
     routeRules: {
         '/_icons': { robots: false }
+    },
+
+    gtag: {
+        id: 'G-CVLJZSC9E6'
     },
 
     colorMode: {
@@ -44,22 +48,7 @@ export default defineNuxtConfig({
         cssPath: '~/assets/scss/app.scss'
     },
 
-    // image: {
-    //     provider: 'contentful',
-    //     contentful: {}
-    // },
-
     css: ['@/assets/scss/app.scss'],
-
-    // Use with: nuxt-simple-sitemap
-    // site: {
-    //     url: process.env.WEBSITE_URL
-    // },
-    // sitemap: {
-    //     sources: [
-    //         '/api/sitemap/urls'
-    //     ]
-    // },
 
     site: {
         url: 'https://www.been.coffee',
@@ -83,15 +72,6 @@ export default defineNuxtConfig({
     devServer: {
         port: 3000, // default: 3000
         host: '0.0.0.0' // default: localhost
-    },
-
-    alias: {
-        '@blocks': fileURLToPath(
-            new URL(
-                './components/Organisms/_ModularContentBlocks/',
-                import.meta.url
-            )
-        )
     },
 
     app: {
@@ -121,18 +101,6 @@ export default defineNuxtConfig({
         },
         pageTransition: { name: 'page', mode: 'out-in' }
     },
-
-    // runtimeConfig: {
-    //     sanity: {
-    //         token: process.env.SANITY_API
-    //     },
-    //     public: {
-    //         WEBSITE_URL: process.env.WEBSITE_URL,
-    //         MARKER_ID: process.env.MARKER_ID,
-    //         MARKER_ENABLED: process.env.MARKER_ENABLED,
-    //         COOKIE_YES_ID: process.env.COOKIE_YES_ID
-    //     }
-    // },
 
     vite: {
         plugins: [
