@@ -6,7 +6,7 @@
             @submit.prevent="submitForm"
         >
             <label>
-                <span class="font-krete text-[11px]">Name</span>
+                <span class="font-krete text-[11px]">Name *</span>
                 <input
                     v-model="name"
                     type="text"
@@ -15,7 +15,7 @@
                 />
             </label>
             <label>
-                <span class="font-krete text-[11px]">Email</span>
+                <span class="font-krete text-[11px]">Email *</span>
                 <input
                     v-model="email"
                     type="email"
@@ -24,7 +24,7 @@
                 />
             </label>
             <label>
-                <span class="font-krete text-[11px]">Your message</span>
+                <span class="font-krete text-[11px]">Your message *</span>
                 <textarea
                     v-model="message"
                     placeholder="What would you like to tell us?"
@@ -34,12 +34,13 @@
             </label>
             <button class="btn mt-4 self-end" type="submit">Submit</button>
         </form>
-        <div v-if="sending" ref="isSending">
+        <div v-if="sending" ref="isSending" class="my-8">
             Please wait, we are sending your form...
         </div>
         <div
             v-if="success"
-            class="mt-8 rounded bg-green-700 px-2 py-1 text-white"
+            ref="completeMessage"
+            class="mt-8 scroll-m-20 rounded bg-green-700 px-2 py-1 text-white"
         >
             <p class="text-center">Thank you for your feedback!</p>
         </div>
@@ -56,6 +57,7 @@ const sending = ref(false)
 const success = ref(false)
 
 const isSending = ref()
+const completeMessage = ref()
 
 const hasFormSent = computed(() => {
     return success.value ? 'opacity-50 pointer-events-none' : ''
@@ -82,7 +84,9 @@ const submitForm = async () => {
         } else {
             sending.value = false
             success.value = true
-            isSending.value.scrollIntoView()
+            nextTick(() => {
+                completeMessage.value.scrollIntoView()
+            })
             console.log(response.value)
         }
     } catch (error) {

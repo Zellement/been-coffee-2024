@@ -6,7 +6,7 @@
             @submit.prevent="submitForm"
         >
             <label>
-                <span class="font-krete text-[11px]">Name</span>
+                <span class="font-krete text-[11px]">Name *</span>
                 <input
                     v-model="name"
                     type="text"
@@ -15,7 +15,7 @@
                 />
             </label>
             <label>
-                <span class="font-krete text-[11px]">Email</span>
+                <span class="font-krete text-[11px]">Email *</span>
                 <input
                     v-model="email"
                     type="email"
@@ -24,15 +24,15 @@
                 />
             </label>
             <label>
-                <span class="font-krete text-[11px]">Date &amp; time</span>
+                <span class="font-krete text-[11px]">Date &amp; time *</span>
                 <input v-model="date" type="datetime-local" required />
             </label>
             <label>
-                <span class="font-krete text-[11px]">Number of people</span>
+                <span class="font-krete text-[11px]">Number of people *</span>
                 <input v-model="people" type="number" required />
             </label>
             <label>
-                <span class="font-krete text-[11px]">More information</span>
+                <span class="font-krete text-[11px]">More information *</span>
                 <textarea
                     v-model="message"
                     placeholder="Your message"
@@ -42,12 +42,13 @@
             </label>
             <button class="btn mt-4 self-end" type="submit">Submit</button>
         </form>
-        <div v-if="sending" ref="isSending">
+        <div v-if="sending" ref="isSending" class="my-8">
             Please wait, we are sending your reservation request...
         </div>
         <div
             v-if="success"
-            class="mt-8 rounded bg-green-700 px-2 py-1 text-white"
+            ref="completeMessage"
+            class="mt-8 scroll-m-8 rounded bg-green-700 px-2 py-1 text-white"
         >
             <p class="text-center">
                 Thank you for your reservation request! We'll be in touch as
@@ -69,6 +70,7 @@ const sending = ref(false)
 const success = ref(false)
 
 const isSending = ref()
+const completeMessage = ref()
 
 const hasFormSent = computed(() => {
     return success.value ? 'opacity-50 pointer-events-none' : ''
@@ -78,9 +80,7 @@ const submitForm = async () => {
     const data = {
         email: email.value,
         message: message.value,
-        name: name.value,
-        people: people.value,
-        date: date.value
+        name: name.value
     }
     try {
         sending.value = true
@@ -97,7 +97,9 @@ const submitForm = async () => {
         } else {
             sending.value = false
             success.value = true
-            isSending.value.scrollIntoView()
+            nextTick(() => {
+                completeMessage.value.scrollIntoView()
+            })
             console.log(response.value)
         }
     } catch (error) {
@@ -105,7 +107,3 @@ const submitForm = async () => {
     }
 }
 </script>
-
-<style scoped>
-/* Add your styles here */
-</style>
