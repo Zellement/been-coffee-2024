@@ -16,6 +16,10 @@ picture img {
     @apply w-full h-full object-cover;
 }
 
+.font-riverside {
+    @apply uppercase;
+}
+
 .page {
     // ::before to push content down to overwrite fixed header
     &::before {
