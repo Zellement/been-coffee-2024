@@ -3,7 +3,7 @@
         <div
             id="progress"
             aria-hidden="true"
-            class="fixed bottom-0 left-0 z-50 h-1 w-full bg-tuscany-500 dark:bg-navy-100"
+            class="pointer-events-none fixed bottom-0 left-0 z-50 h-1 w-full bg-tuscany-500 dark:bg-navy-100"
         />
         <nuxt-page />
     </nuxt-layout>

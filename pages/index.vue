@@ -222,7 +222,7 @@ const getRandomColor = () => {
 }
 
 useHead({
-    title: 'Been Coffee | Award-winning coffee shop near Derby & Willington',
+    title: 'Been Coffee - Award-winning coffee shop near Derby & Willington',
     meta: [
         {
             hid: 'description',

@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 useHead({
-    title: 'Book a table | Been Coffee',
+    title: 'Book a table',
     meta: [
         {
             hid: 'description',

@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 useHead({
-    title: 'Gallery | Been Coffee',
+    title: 'Gallery',
     meta: [
         {
             hid: 'description',

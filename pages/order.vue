@@ -22,7 +22,7 @@ const toggleModalGoodeats = () => {
     uiStore.toggleModalGoodeats()
 }
 useHead({
-    title: 'Order for collection | Been Coffee',
+    title: 'Order for collection',
     meta: [
         {
             hid: 'description',
