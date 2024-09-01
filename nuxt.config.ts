@@ -16,7 +16,6 @@ export default defineNuxtConfig({
         '@nuxtjs/sanity',
         '@nuxt/icon',
         '@nuxtjs/supabase',
-        '@nuxtjs/sitemap',
         '@nuxtjs/seo'
     ],
 
