@@ -44,7 +44,12 @@
                 class="reveal-from-sides"
                 :class="['relative', item.class]"
             >
-                <nuxt-picture class="" :src="item.src" :alt="item.alt" />
+                <nuxt-picture
+                    class=""
+                    sizes="336px sm:25vw md:25vw lg:25vw xl:25vw"
+                    :src="item.src"
+                    :alt="item.alt"
+                />
                 <span
                     class="absolute bottom-0 right-2 font-krete text-[12px] text-white"
                 >
