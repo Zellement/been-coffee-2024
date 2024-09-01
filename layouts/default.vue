@@ -4,14 +4,15 @@
         <site-header />
         <client-only>
             <div
-                class="fixed inset-0 -z-50 flex h-full w-full opacity-40 lg:opacity-70"
+                class="pointer-events-none fixed inset-0 -z-50 flex h-full w-full opacity-40 lg:opacity-70"
             >
                 <div class="polygon-clip-mask--bl h-full w-full">
                     <nuxt-picture
                         src="/img/pattern.png"
                         class="h-full w-full object-cover"
                         :style="bgImageClasses"
-                        alt="Navy pattern"
+                        aria-hidden="true"
+                        alt="Pattern background"
                     />
                 </div>
             </div>

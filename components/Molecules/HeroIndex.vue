@@ -13,8 +13,8 @@
                 :class="spanClasses"
                 class="ml-[1vw] mt-[1vw] font-riverside-outline text-navy dark:text-butterscotch"
             >
-                <span>Been</span>
-                <span>Coffee</span>
+                <span class="uppercase">Been</span>
+                <span class="uppercase">Coffee</span>
             </span>
         </div>
         <div
