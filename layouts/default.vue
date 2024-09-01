@@ -1,6 +1,5 @@
 <template>
     <div class="layout">
-        <site-seo />
         <site-header />
         <client-only>
             <div

@@ -18,11 +18,11 @@
             </span>
         </div>
         <div
-            class="img-clip col-span-10 col-start-3 row-start-1 aspect-[580/386] xl:col-span-8 xl:col-start-5 xl:aspect-landscape"
+            class="img-clip col-span-10 col-start-3 row-start-1 aspect-[580/386] overflow-clip xl:col-span-8 xl:col-start-5 xl:aspect-landscape"
         >
             <nuxt-picture
                 src="/img/shop-exterior.jpeg"
-                class=""
+                class="h-full w-full object-cover"
                 alt="Shop exterior"
             />
         </div>
