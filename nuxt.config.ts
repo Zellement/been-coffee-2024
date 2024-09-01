@@ -63,7 +63,8 @@ export default defineNuxtConfig({
         name: 'Been Coffee',
         description:
             'Been Coffee is an independent, award-winning coffee shop with amazing coffee, tea, bubble tea, boba tea, cakes, bagels, cobs & paninis near Derby & Willington, UK',
-        defaultLocale: 'en' // not needed if you have @nuxtjs/i18n installed
+        defaultLocale: 'en',
+        trailingSlash: false
     },
 
     ogImage: { enabled: false },
@@ -99,10 +100,6 @@ export default defineNuxtConfig({
                 {
                     name: 'viewport',
                     content: 'width=device-width, initial-scale=1'
-                },
-                {
-                    name: 'description',
-                    content: 'something'
                 },
                 { hid: 'og-type', property: 'og:type', content: 'website' }
             ],
