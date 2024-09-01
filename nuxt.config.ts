@@ -19,6 +19,10 @@ export default defineNuxtConfig({
         '@nuxtjs/seo'
     ],
 
+    routeRules: {
+        '/_icons': { robots: false }
+    },
+
     colorMode: {
         classSuffix: ''
     },
