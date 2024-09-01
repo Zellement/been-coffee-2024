@@ -15,7 +15,9 @@ export default defineNuxtConfig({
         '@nuxtjs/color-mode',
         '@nuxtjs/sanity',
         '@nuxt/icon',
-        '@nuxtjs/supabase'
+        '@nuxtjs/supabase',
+        '@nuxtjs/sitemap',
+        '@nuxtjs/seo'
     ],
 
     colorMode: {
@@ -55,6 +57,17 @@ export default defineNuxtConfig({
     //         '/api/sitemap/urls'
     //     ]
     // },
+
+    site: {
+        url: 'https://www.been.coffee',
+        name: 'Been Coffee',
+        description:
+            'Been Coffee is an independent, award-winning coffee shop with amazing coffee, tea, bubble tea, boba tea, cakes, bagels, cobs & paninis near Derby & Willington, UK',
+        defaultLocale: 'en' // not needed if you have @nuxtjs/i18n installed
+    },
+
+    ogImage: { enabled: false },
+
     components: [
         {
             path: '~/components',
