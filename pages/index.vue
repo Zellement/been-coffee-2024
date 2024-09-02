@@ -120,7 +120,7 @@
             </div>
             <div class="reveal-from-sides h-full rotate-1 overflow-hidden">
                 <nuxt-picture
-                    src="/img/cans2.jpeg"
+                    src="/img/cans.jpg"
                     alt="Karma cans on a shelf"
                     class=""
                 />

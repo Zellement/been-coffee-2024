@@ -12,16 +12,7 @@
                         background-image: url('/pattern.svg');
                         background-size: cover;
                     "
-                >
-                    <!-- <nuxt-picture
-                        src="/img/pattern.png"
-                        class="h-full w-full object-cover"
-                        :style="bgImageClasses"
-                        aria-hidden="true"
-                        alt="Pattern background"
-                    /> -->
-                    <!-- <bg-pattern class="h-[100vh] w-[100vw] bg-green-200" /> -->
-                </div>
+                ></div>
             </div>
         </client-only>
         <main>
@@ -31,14 +22,4 @@
     </div>
 </template>
 
-<script setup lang="ts">
-// const colorMode = useColorMode()
-
-// const currentColorMode = computed(() => colorMode.value)
-
-// const bgImageClasses: ComputedRef<string> = computed(() => {
-//     return currentColorMode.value === 'dark'
-//         ? 'filter: invert(22%) sepia(11%) saturate(3462%) hue-rotate(198deg) brightness(94%) contrast(92%); opacity: 0.6;'
-//         : 'filter: invert(45%) sepia(93%) saturate(428%) hue-rotate(330deg) brightness(82%) contrast(98%); opacity: 0.2;'
-// })
-</script>
+<script setup lang="ts"></script>
