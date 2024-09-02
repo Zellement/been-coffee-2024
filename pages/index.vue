@@ -17,6 +17,12 @@
             </div>
         </double-title>
         <index-intro class="" />
+        <div
+            class="container container-px my-16 flex items-center justify-center gap-2"
+        >
+            <nuxt-link to="/order" class="btn"> Order online </nuxt-link>
+            <nuxt-link to="/menu" class="btn"> View menu </nuxt-link>
+        </div>
         <awards-won class="mt-16" />
         <double-title
             class="container container-px container--lg grid-layout mt-8 xl:mt-16"
