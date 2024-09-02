@@ -78,9 +78,11 @@ const hasFormSent = computed(() => {
 
 const submitForm = async () => {
     const data = {
+        name: name.value,
         email: email.value,
-        message: message.value,
-        name: name.value
+        date: date.value,
+        people: people.value,
+        message: message.value
     }
     try {
         sending.value = true
