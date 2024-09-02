@@ -80,15 +80,21 @@
                     <div
                         class="container-px col-span-full flex w-full bg-butterscotch-200 pb-4 pt-3 dark:bg-navy-400"
                     >
-                        <div class="ml-auto flex items-center gap-2">
+                        <div
+                            class="ml-auto flex flex-col items-center gap-2 text-center lg:flex-row"
+                        >
                             <site-brand class="h-4 w-4" />
                             <p
-                                class="flex flex-row gap-1 text-[0.7em] opacity-70"
+                                class="flex flex-col gap-1 text-[0.7em] leading-snug opacity-70 lg:flex-row"
                             >
-                                Been Coffee is a trading name of Been Coffee
-                                House Ltd. All rights reserved.
-                                <span>&copy;</span>
-                                <span>{{ date }}</span>
+                                <span
+                                    >Been Coffee is a trading name of Been
+                                    Coffee House Ltd. All rights reserved.</span
+                                >
+                                <span class="flex gap-1">
+                                    <span>&copy;</span>
+                                    <span>{{ date }}</span>
+                                </span>
                             </p>
                         </div>
                     </div>
