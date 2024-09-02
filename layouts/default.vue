@@ -3,10 +3,15 @@
         <site-header />
         <client-only>
             <div
-                class="pointer-events-none fixed inset-0 -z-50 flex h-full w-full opacity-40 lg:opacity-70"
+                class="pointer-events-none fixed inset-0 -z-50 flex h-full w-full opacity-100 lg:opacity-70"
+                aria-hidden="true"
             >
                 <div
-                    class="polygon-clip-mask--bl h-full w-full text-tuscany-200 dark:text-navy-200"
+                    class="polygon-clip-mask--bl h-full w-full opacity-10 dark:opacity-40"
+                    style="
+                        background-image: url('/pattern.svg');
+                        background-size: cover;
+                    "
                 >
                     <!-- <nuxt-picture
                         src="/img/pattern.png"
@@ -15,7 +20,7 @@
                         aria-hidden="true"
                         alt="Pattern background"
                     /> -->
-                    <bg-pattern />
+                    <!-- <bg-pattern class="h-[100vh] w-[100vw] bg-green-200" /> -->
                 </div>
             </div>
         </client-only>
