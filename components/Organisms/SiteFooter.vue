@@ -93,7 +93,7 @@
                                     >Been Coffee is a trading name of Been
                                     Coffee House Ltd. All rights reserved.</span
                                 >
-                                <span class="flex gap-1">
+                                <span class="mx-auto flex gap-1">
                                     <span>&copy;</span>
                                     <span>{{ date }}</span>
                                 </span>
