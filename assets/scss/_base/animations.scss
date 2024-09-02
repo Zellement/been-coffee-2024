@@ -28,7 +28,7 @@
   animation-timeline: view(block 30% 30%);
 }
 
-// @supports (animation-timeline: view()) {
+@supports (animation-timeline: view()) {
   @layer utilities {
     @keyframes gallery-img-in {
       from {
@@ -80,4 +80,4 @@
       animation-range: entry-crossing -130% contain 50%;
     }
   }
-// }
+}
