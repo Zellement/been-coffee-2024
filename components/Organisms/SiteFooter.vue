@@ -32,7 +32,7 @@
                         >
                             <p class="flex flex-col">
                                 <span
-                                    class="font-riverside-outline text-base leading-none text-tuscany"
+                                    class="font-riverside text-base leading-none text-butterscotch-500"
                                     >Just off</span
                                 ><span class="text-md leading-none"
                                     >Toyota Island</span
@@ -40,7 +40,7 @@
                             </p>
                             <p class="flex flex-col">
                                 <span
-                                    class="font-riverside-outline text-base leading-none text-tuscany"
+                                    class="font-riverside text-base leading-none text-butterscotch-500"
                                     >On the</span
                                 ><span class="text-md leading-none"
                                     >A50 &amp; A38</span
