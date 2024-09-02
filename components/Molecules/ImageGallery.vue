@@ -11,7 +11,9 @@
             <video
                 v-if="image.endsWith('.mp4')"
                 loop
+                disablepictureinpicture
                 muted
+                playsinline
                 autoplay
                 class="h-full w-full object-cover"
             >
