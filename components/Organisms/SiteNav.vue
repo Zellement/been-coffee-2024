@@ -47,6 +47,11 @@ const navigation: NavItem[] = [
         url: '/order'
     },
     {
+        key: 'menu',
+        label: 'Menu',
+        url: '/menu'
+    },
+    {
         key: 'reviews',
         label: 'Reviews',
         url: '/reviews'
