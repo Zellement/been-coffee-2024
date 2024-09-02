@@ -117,14 +117,6 @@ picture img {
     background: #555; 
   }
 
-  @keyframes grow-progress {
-    0% {
-        transform: scaleX(0)
-    }
-    100% {
-        transform: scaleX(1)
-    }
-}
 
 .img-clip {
     clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 97%);
