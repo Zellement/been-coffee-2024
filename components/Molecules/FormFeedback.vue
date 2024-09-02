@@ -45,9 +45,7 @@ const hasFormSent = computed(() => {
 
 const submitForm = async () => {
     const data = {
-        email: email.value,
-        message: message.value,
-        name: name.value
+        message: message.value
     }
     try {
         sending.value = true
