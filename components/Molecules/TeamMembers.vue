@@ -10,7 +10,7 @@
             <li
                 v-for="teamMember in shuffledAllTeamMembers"
                 :key="teamMember._id"
-                class="fade-in relative flex aspect-[4/5] h-full w-full"
+                class="relative flex aspect-[4/5] h-full w-full"
             >
                 <span
                     class="absolute bottom-0 right-0 z-30 bg-tuscany px-2 font-krete text-[11px] text-white dark:bg-navy"

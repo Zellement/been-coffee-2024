@@ -6,8 +6,8 @@
             v-for="(image, index) in images"
             :key="index"
             :class="getMosaicClass(index)"
-            class="gallery-img-in"
         >
+            <!-- class="gallery-img-in" -->
             <video
                 v-if="image.endsWith('.mp4')"
                 loop
