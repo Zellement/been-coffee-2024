@@ -1,7 +1,7 @@
 <template>
     <div
         v-if="rating > 4"
-        class="card relative flex w-3/4 min-w-[300px] flex-col gap-2 p-4 shadow-lg"
+        class="card relative flex w-[300px] min-w-[300px] flex-col gap-2 rounded bg-white/50 p-4 shadow-lg dark:bg-navy-700/20 lg:w-[350px] lg:min-w-[350px]"
     >
         <div class="flex gap-2">
             <Icon

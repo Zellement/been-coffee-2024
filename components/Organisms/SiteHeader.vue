@@ -26,6 +26,7 @@
                     <div class="flex justify-between">
                         <site-brand
                             class="col-span-10 col-start-2 row-start-1 h-10 w-10 lg:hidden"
+                            @click="uiStore.toggleMobileNav(false)"
                         />
                         <button
                             class="relative z-10 col-start-11 row-start-1 lg:hidden"

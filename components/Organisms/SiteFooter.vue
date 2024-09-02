@@ -3,7 +3,7 @@
         <div
             class="flex items-center justify-center gap-4 border-t-4 border-butterscotch-500 bg-white/20 py-6 dark:border-navy-400 dark:bg-black/10"
         >
-            <h3 class="font-krete">Be Social</h3>
+            <h3 class="font-krete">Bee Social</h3>
             <ul class="flex gap-4">
                 <li v-for="item in social" :key="item.name">
                     <a
@@ -77,9 +77,11 @@
                             />
                         </div>
                     </div>
-                    <div
-                        class="container-px col-span-full flex w-full bg-butterscotch-200 pb-4 pt-3 dark:bg-navy-400"
-                    >
+                </div>
+                <div
+                    class="w-full bg-butterscotch-200 pb-4 pt-3 dark:bg-navy-400"
+                >
+                    <div class="container container-px col-span-full flex">
                         <div
                             class="ml-auto flex flex-col items-center gap-2 text-center lg:flex-row"
                         >

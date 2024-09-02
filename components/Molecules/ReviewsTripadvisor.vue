@@ -1,7 +1,12 @@
 <template>
     <div class="relative">
-        <div class="flex flex-row items-center justify-between gap-4">
-            <h2 class="font-riverside text-lg">Latest Tripadvisor Reviews</h2>
+        <div
+            class="container container-px flex flex-row items-center justify-between gap-4"
+        >
+            <h2 class="flex flex-col font-riverside text-lg">
+                <span class="text-[0.8em]">Latest reviews from</span>
+                <span> Tripadvisor </span>
+            </h2>
 
             <nuxt-link
                 class="btn flex-shrink-0 self-end"
@@ -11,10 +16,7 @@
                 See all
             </nuxt-link>
         </div>
-        <div
-            v-if="tripadvisorData"
-            class="overflow-hidden px-2 md:px-4 xl:px-6"
-        >
+        <div v-if="tripadvisorData" class="lg:container overflow-clip">
             <div class="w-full overflow-x-scroll py-8">
                 <div class="flex w-full flex-row space-x-4">
                     <template v-for="item in tripadvisorData" :key="item.id">
@@ -28,58 +30,6 @@
                             {{ item?.text }}
                         </review-card>
                     </template>
-
-                    <!--                     
-                        <div class="flex gap-2">
-                            <Icon
-                                name="material-symbols:person"
-                                class="h-6 w-6 text-butterscotch"
-                            />
-                            {{ item.user.username }}
-                        </div>
-                        <div class="flex gap-2">
-                            <Icon
-                                name="material-symbols:calendar-month-outline-sharp"
-                                class="h-6 w-6 text-butterscotch"
-                            />
-                            {{ shortDateConverter(item.published_date) }}
-                        </div>
-                        <div class="relative flex gap-1">
-                            <Icon
-                                v-for="i in 5"
-                                :key="i"
-                                name="ic:outline-star-outline"
-                                class="h-6 w-6 text-butterscotch opacity-30"
-                            />
-                            <div class="absolute left-0 top-0 flex gap-1">
-                                <Icon
-                                    v-for="i in item.rating"
-                                    :key="i"
-                                    name="ic:outline-star"
-                                    class="h-6 w-6 text-butterscotch"
-                                />
-                            </div>
-                        </div>
-                        <h3 class="font-krete font-bold">
-                            {{ item.title }}
-                        </h3> -->
-                    <div class="">
-                        <!-- <card-order-details
-                                :details="item?.text"
-                                :string="true"
-                                class="text-xs"
-                            >
-                                <template #response>
-                                    <div
-                                        v-if="item?.owner_response?.text"
-                                        class="mt-8 border-t border-gray-500 border-opacity-30 pt-8 italic"
-                                    >
-                                        {{ item?.owner_response?.text }}
-                                    </div>
-                                </template>
-                            </card-order-details> -->
-                        <!-- </div> -->
-                    </div>
                 </div>
             </div>
         </div>

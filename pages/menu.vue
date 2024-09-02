@@ -1,6 +1,8 @@
 <template>
     <div class="page pb-16">
-        <div class="container container-px flex flex-col items-center py-8">
+        <div
+            class="container container-px flex flex-col items-center py-8 text-center"
+        >
             <page-title title="Menu" class="mb-4" />
             <p class="max-w-screen-sm text-center">
                 Have a browse of what we have to offer, but please note this

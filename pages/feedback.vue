@@ -1,6 +1,8 @@
 <template>
     <div class="page pb-16">
-        <div class="container container-px flex flex-col items-center py-8">
+        <div
+            class="container container-px flex flex-col items-center py-8 text-center"
+        >
             <page-title title="Feedback" class="mb-4" />
             <p>
                 Please complete the form below to send anonymous feedback. We

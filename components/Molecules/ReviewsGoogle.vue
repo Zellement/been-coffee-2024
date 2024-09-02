@@ -1,7 +1,12 @@
 <template>
     <div class="relative">
-        <div class="flex flex-row items-center justify-between gap-4">
-            <h2 class="font-riverside text-lg">Latest Google Reviews</h2>
+        <div
+            class="container container-px flex flex-row items-center justify-between gap-4"
+        >
+            <h2 class="flex flex-col font-riverside text-lg">
+                <span class="text-[0.8em]">Latest reviews from</span>
+                <span> Google </span>
+            </h2>
 
             <nuxt-link
                 class="btn flex-shrink-0 self-end"
@@ -11,8 +16,8 @@
                 See all
             </nuxt-link>
         </div>
-        <div v-if="googleReviewData" class="overflow-hidden">
-            <div class="custom-scrollbar w-full overflow-x-scroll py-8">
+        <div v-if="googleReviewData" class="lg:container overflow-clip">
+            <div class="custom-scrollbar w-full overflow-x-scroll py-8 pl-4">
                 <div class="flex w-full flex-row space-x-4">
                     <template v-for="item in googleReviewData" :key="item.id">
                         <review-card
