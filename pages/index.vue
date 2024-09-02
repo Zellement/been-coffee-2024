@@ -29,10 +29,10 @@
                 We offer a variety of both food and drink options, including
                 thick cut butcher
                 <strong>bacon &amp; Philadelphia bagels</strong>, award-winning
-                <strong>sausage cobs</strong>,
-                <strong>ham &amp; cheese paninis</strong>,
+                <strong>sausage cobs</strong> and <strong>bacon cobs</strong>,
+                <strong>paninis</strong>,
                 <strong>handmade sausage rolls</strong> and traditional
-                <strong>scotch eggs</strong>.
+                <strong>scotch eggs</strong>, and much, much more.
             </p>
         </div>
         <div
@@ -75,7 +75,7 @@
                 We've spent countless hours searching for excellent vegan and
                 low-gluten options that we're now proud to offer to you. We
                 offer low-gluten bagels and paninis, vegan sausage rolls and
-                many of our cakes are both vegan and low-gluten.
+                many of our cakes are either vegan or low-gluten.
             </p>
         </div>
         <div class="container group my-16 flex w-full flex-col gap-8">
