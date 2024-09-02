@@ -28,17 +28,23 @@
                 <div class="container grid-layout container-padding pt-8">
                     <div class="col-span-full p-4 xl:col-span-4">
                         <div
-                            class="mb-8 flex w-full flex-row justify-center gap-2 font-riverside leading-none lg:justify-start lg:gap-10"
+                            class="mb-8 flex w-full flex-row justify-center gap-16 font-riverside leading-none lg:justify-start"
                         >
                             <p class="flex flex-col">
-                                <span class="text-base text-tuscany"
+                                <span
+                                    class="font-riverside-outline text-base leading-none text-tuscany"
                                     >Just off</span
-                                ><span class="text-md">Toyota Island</span>
+                                ><span class="text-md leading-none"
+                                    >Toyota Island</span
+                                >
                             </p>
                             <p class="flex flex-col">
-                                <span class="text-base text-tuscany"
+                                <span
+                                    class="font-riverside-outline text-base leading-none text-tuscany"
                                     >On the</span
-                                ><span class="text-md">A50 &amp; A38</span>
+                                ><span class="text-md leading-none"
+                                    >A50 &amp; A38</span
+                                >
                             </p>
                         </div>
                         <h3 class="mb-1 font-riverside text-md">Been Coffee</h3>
