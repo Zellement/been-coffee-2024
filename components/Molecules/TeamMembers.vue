@@ -16,9 +16,11 @@
                     class="absolute bottom-0 right-0 z-30 bg-tuscany px-2 font-krete text-[11px] text-white dark:bg-navy"
                     >{{ teamMember.name }}</span
                 >
-                <div class="flex h-full w-full flex-shrink-0">
+                <div
+                    v-if="teamMember.image?.asset"
+                    class="flex h-full w-full flex-shrink-0"
+                >
                     <SanityImage
-                        v-if="teamMember.image?.asset"
                         :asset-id="`${teamMember?.image?.asset._ref}`"
                         auto="format"
                         h="800"

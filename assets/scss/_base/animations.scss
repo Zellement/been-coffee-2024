@@ -1,46 +1,35 @@
-@supports (animation-timeline: scroll()) {
-  @keyframes grow-progress {
-    0% {
-      transform: scaleX(0);
-    }
-    100% {
-      transform: scaleX(1);
-    }
+@keyframes grow-progress {
+  0% {
+    transform: scaleX(0);
   }
-
-  #progress {
-    animation: grow-progress linear forwards;
-    animation-timeline: scroll();
+  100% {
+    transform: scaleX(1);
   }
 }
 
-@supports (animation-timeline: view()) {
+#progress {
+  animation: grow-progress linear forwards;
+  animation-timeline: scroll();
+}
+
+@keyframes anim-header-top {
+  from {
+    @apply text-butterscotch-500;
+    transform: translateY(-5%);
+  }
+  100% {
+    @apply text-tuscany-500;
+    transform: translateY(100%);
+  }
+}
+
+.anim-header-top {
+  animation: anim-header-top linear forwards;
+  animation-timeline: view(block 30% 30%);
+}
+
+// @supports (animation-timeline: view()) {
   @layer utilities {
-    @keyframes anim-header-top {
-      from {
-        @apply text-butterscotch-500;
-        transform: translateY(-5%);
-      }
-      100% {
-        @apply text-tuscany-500;
-        transform: translateY(100%);
-      }
-    }
-
-    @keyframes anim-header-bottom {
-      from {
-        transform: translateY(0rem);
-      }
-      100% {
-        transform: translateY(-6rem);
-      }
-    }
-
-    .anim-header-top {
-      animation: anim-header-top linear forwards;
-      animation-timeline: view(block 30% 30%);
-    }
-
     @keyframes gallery-img-in {
       from {
         transform: translateY(4rem);
@@ -91,4 +80,4 @@
       animation-range: entry-crossing 0% contain 50%;
     }
   }
-}
+// }
