@@ -64,13 +64,13 @@
                             <div
                                 class="absolute bottom-[27%] right-[61%] z-10 h-auto w-[30%]"
                             >
-                                <nuxt-img
+                                <img
                                     src="/img/arrow-bee.svg"
                                     alt="Been Coffee bee icon"
                                     class="h-[30%]"
                                 />
                             </div>
-                            <nuxt-img
+                            <img
                                 src="/img/map.svg"
                                 alt="Map of the area"
                                 class="h-full w-full dark:invert"
