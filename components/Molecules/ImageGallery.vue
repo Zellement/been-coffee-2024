@@ -7,7 +7,6 @@
             :key="index"
             :class="getMosaicClass(index)"
         >
-            <!-- class="gallery-img-in" -->
             <video
                 v-if="image.endsWith('.mp4')"
                 loop
@@ -19,10 +18,11 @@
             >
                 <source :src="image" type="video/mp4" />
             </video>
-            <nuxt-picture
+            <single-picture
                 v-else
-                :src="image"
-                :alt="'Gallery image ' + (index + 1)"
+                :img-data="{ url: image, alt: `Gallery image ${index + 1}` }"
+                sizes="336px 2xs:425px xs:472px sm:560px md:880px lg:1100px"
+                quality="85"
                 class="h-full w-full object-cover"
             />
         </div>
