@@ -12,10 +12,12 @@
         </div>
 
         <div class="container container-px container--md flex flex-col">
-            <nuxt-picture
+            <single-picture
                 v-for="i in images"
                 :key="i"
-                :src="`/img/menus/0${i}.png`"
+                :img-data="{ url: `/img/menus/0${i}.png`, alt: `Menu` }"
+                sizes="336px 2xs:425px xs:472px sm:560px md:880px lg:1100px"
+                quality="80"
             />
         </div>
     </div>
