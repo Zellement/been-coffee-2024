@@ -51,7 +51,7 @@
                 :class="['relative', item.class]"
             >
                 <single-picture
-                    sizes="336px sm:25vw md:25vw lg:25vw xl:25vw"
+                    sizes="220px md:300px lg:25vw"
                     :img-data="{
                         url: item.src,
                         alt: item.alt

@@ -26,7 +26,7 @@
                     alt: 'Shop exterior'
                 }"
                 class="h-full w-full object-cover"
-                sizes="336px 2xs:425px xs:472px sm:560px lg:780px xl:1400px"
+                sizes="336px xs:440px sm:560px lg:780px xl:1400px"
             />
         </div>
     </div>
