@@ -50,11 +50,12 @@
                 class="reveal-from-sides"
                 :class="['relative', item.class]"
             >
-                <nuxt-picture
-                    class=""
+                <single-picture
                     sizes="336px sm:25vw md:25vw lg:25vw xl:25vw"
-                    :src="item.src"
-                    :alt="item.alt"
+                    :img-data="{
+                        url: item.src,
+                        alt: item.alt
+                    }"
                 />
                 <span
                     class="absolute bottom-0 right-2 font-krete text-[12px] text-white"
@@ -125,10 +126,12 @@
                 </p>
             </div>
             <div class="reveal-from-sides h-full rotate-1 overflow-hidden">
-                <nuxt-picture
-                    src="/img/cans.jpg"
-                    alt="Karma cans on a shelf"
-                    class=""
+                <single-picture
+                    :img-data="{
+                        url: '/img/cans.jpg',
+                        alt: 'Karma cans on a shelf'
+                    }"
+                    sizes="336px sm:500px lg:600px"
                 />
             </div>
             <div class="flex items-end">

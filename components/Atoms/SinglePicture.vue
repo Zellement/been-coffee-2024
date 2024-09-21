@@ -8,7 +8,7 @@
         />
 
         <nuxt-picture
-            class="relative transition-opacity duration-300"
+            class="relative h-full w-full object-cover transition-opacity duration-300"
             :src="imgData.url"
             :alt="imgData.alt"
             :class="pictureClasses"
@@ -22,9 +22,12 @@
 <script lang="ts" setup>
 interface Props {
     imgData: ImageTypes
-    sizes: string
+    sizes?: string
 }
-defineProps<Props>()
+
+withDefaults(defineProps<Props>(), {
+    sizes: '336px sm:25vw md:25vw lg:25vw xl:25vw'
+})
 
 const mediaLoaded: Ref = ref(false)
 
