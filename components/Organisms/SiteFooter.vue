@@ -11,6 +11,7 @@
                         target="_blank"
                         class="transition-colors hover:text-tuscany"
                         rel="noopener noreferrer"
+                        :title="`Been Coffee on {{ item.name }}`"
                     >
                         <icon :name="item.icon" class="h-6 w-6" />
                     </a>
