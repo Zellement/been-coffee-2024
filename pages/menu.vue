@@ -11,13 +11,12 @@
             </p>
         </div>
 
-        <div class="container container-px container--md flex flex-col">
+        <div class="container container-px grid lg:grid-cols-2">
             <single-picture
                 v-for="i in images"
                 :key="i"
                 :img-data="{ url: `/img/menus/0${i}.png`, alt: `Menu` }"
-                sizes="336px 2xs:425px xs:472px sm:560px md:880px lg:1100px"
-                quality="80"
+                sizes="336px 2xs:425px xs:472px sm:560px lg:880px"
             />
         </div>
     </div>

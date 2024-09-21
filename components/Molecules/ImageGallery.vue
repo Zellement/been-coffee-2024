@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="grid grid-cols-2 overflow-clip sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
-    >
+    <div class="grid grid-cols-2 overflow-clip sm:grid-cols-6">
         <div
             v-for="(item, index) in media"
             :key="index"
@@ -56,7 +54,7 @@ const getMosaicClass = (index) => {
         'sm:row-span-2 sm:col-span-2 col-span-full',
         'sm:row-span-2 sm:col-span-2 col-span-full',
         'sm:row-span-1 sm:col-span-2 col-span-full',
-        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-1 sm:col-span-2 col-span-full',
         'sm:row-span-2 sm:col-span-2 col-span-full',
         'sm:row-span-2 sm:col-span-2 col-span-full',
         'sm:row-span-2 sm:col-span-2 col-span-full',
@@ -64,14 +62,14 @@ const getMosaicClass = (index) => {
         'sm:row-span-1 sm:col-span-1 col-span-full',
         'sm:row-span-2 sm:col-span-2 col-span-full',
         'sm:row-span-2 sm:col-span-1 col-span-full',
-        'sm:row-span-1 sm:col-span-1 col-span-full',
-        'sm:row-span-2 sm:col-span-2 col-span-full',
+        'sm:row-span-2 sm:col-span-1 col-span-full',
+        'sm:row-span-3 sm:col-span-2 col-span-full',
         'sm:row-span-1 sm:col-span-2 col-span-full',
         'sm:row-span-2 sm:col-span-1 col-span-full',
-        'sm:row-span-1 sm:col-span-1 col-span-full',
+        'sm:row-span-2 sm:col-span-1 col-span-full',
         'sm:row-span-2 sm:col-span-2 col-span-full',
-        'sm:row-span-1 sm:col-span-1 col-span-full',
-        'sm:row-span-1 sm:col-span- col-span-full2',
+        'sm:row-span-1 sm:col-span-3 col-span-full',
+        'sm:row-span-1 sm:col-span-2 col-span-full',
         'sm:row-span-2 sm:col-span-2 col-span-full'
     ]
     return classes[index % classes.length]
