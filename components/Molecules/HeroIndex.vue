@@ -20,11 +20,9 @@
         <div
             class="img-clip col-span-10 col-start-3 row-start-1 aspect-[580/386] overflow-clip xl:col-span-8 xl:col-start-5 xl:aspect-landscape"
         >
-            <single-picture
-                :img-data="{
-                    url: '/img/shop-exterior.jpeg',
-                    alt: 'Shop exterior'
-                }"
+            <nuxt-picture
+                src="/img/shop-exterior.jpeg"
+                alt="Shop exterior"
                 class="h-full w-full object-cover"
                 sizes="336px xs:440px sm:560px lg:780px xl:1400px"
                 loading="eager"
