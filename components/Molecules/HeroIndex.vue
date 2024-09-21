@@ -27,6 +27,7 @@
                 }"
                 class="h-full w-full object-cover"
                 sizes="336px xs:440px sm:560px lg:780px xl:1400px"
+                loading="eager"
             />
         </div>
     </div>

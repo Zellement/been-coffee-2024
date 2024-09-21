@@ -13,7 +13,7 @@
             :alt="imgData.alt"
             :class="pictureClasses"
             :sizes="sizes"
-            loading="lazy"
+            :loading="loading"
             @load="pictureHasLoaded"
         />
     </div>
@@ -23,10 +23,12 @@
 interface Props {
     imgData: ImageTypes
     sizes?: string
+    loading?: 'lazy' | 'eager'
 }
 
 withDefaults(defineProps<Props>(), {
-    sizes: '336px sm:25vw md:25vw lg:25vw xl:25vw'
+    sizes: '336px sm:25vw md:25vw lg:25vw xl:25vw',
+    loading: 'lazy'
 })
 
 const mediaLoaded: Ref = ref(false)
