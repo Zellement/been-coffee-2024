@@ -66,7 +66,7 @@
         </div>
         <div class="container container-px text-center">
             <ul
-                class="my-8 grid grid-cols-1 items-center justify-center gap-2 font-krete text-lg text-butterscotch-500 lg:grid-cols-2"
+                class="my-8 grid grid-cols-1 items-center justify-center gap-2 font-krete text-lg text-tuscany-500 dark:text-butterscotch-500 lg:grid-cols-2"
             >
                 <li class="mx-auto flex flex-row items-center gap-2">
                     <Icon
@@ -85,7 +85,10 @@
                 many of our cakes are either vegan or low-gluten.
             </p>
         </div>
-        <div class="container group my-16 flex w-full flex-col gap-8">
+        <div
+            class="container group my-16 flex w-full flex-col gap-8"
+            aria-hidden="true"
+        >
             <div
                 class="flex flex-wrap items-center justify-center space-x-4 text-center text-[8vw]/[8vw] md:text-[4vw]/[4vw]"
             >

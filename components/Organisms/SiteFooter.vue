@@ -68,9 +68,11 @@
                                     src="/img/arrow-bee.svg"
                                     alt="Been Coffee bee icon"
                                     class="h-[30%]"
+                                    loading="lazy"
                                 />
                             </div>
                             <img
+                                loading="lazy"
                                 src="/img/map.svg"
                                 alt="Map of the area"
                                 class="h-full w-full dark:invert"
