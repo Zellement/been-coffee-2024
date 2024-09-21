@@ -3,12 +3,12 @@
         class="grid grid-cols-2 overflow-clip sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
     >
         <div
-            v-for="(image, index) in images"
+            v-for="(item, index) in media"
             :key="index"
             :class="getMosaicClass(index)"
         >
             <video
-                v-if="image.endsWith('.mp4')"
+                v-if="item.endsWith('.mp4')"
                 loop
                 disablepictureinpicture
                 muted
@@ -16,12 +16,12 @@
                 autoplay
                 class="h-full w-full object-cover"
             >
-                <source :src="image" type="video/mp4" />
+                <source :src="item" type="video/mp4" />
             </video>
             <single-picture
                 v-else
-                :img-data="{ url: image, alt: `Gallery image ${index + 1}` }"
-                sizes="336px 2xs:425px xs:472px sm:560px md:880px lg:1100px"
+                :img-data="{ url: item, alt: `Gallery item ${index + 1}` }"
+                sizes="336px 2xs:425px xs:472px sm:560px lg:780px"
                 quality="85"
                 class="h-full w-full object-cover"
             />
@@ -32,7 +32,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const images = ref(
+const media = ref(
     Array.from({ length: 22 }, (_, i) => {
         switch (i) {
             case 1:
