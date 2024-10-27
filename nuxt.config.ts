@@ -96,6 +96,9 @@ export default defineNuxtConfig({
             script: [
                 {
                     src: 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js'
+                },
+                {
+                    src: 'https://consent.cookiebot.com/uc.js?cbid=a6734070-cc0f-4a9f-9db5-b776c6117cc5'
                 }
             ]
         },
