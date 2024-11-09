@@ -3,8 +3,10 @@
         <button class="btn mx-auto mb-8" @click.prevent="shuffleTeamMembers">
             Shuffle team
         </button>
-        <ul
+        <transition-group
             v-if="hasTeamMembers"
+            name="list"
+            tag="ul"
             class="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 2xl:grid-cols-6"
         >
             <li
@@ -16,28 +18,40 @@
                     class="absolute bottom-0 right-0 z-30 bg-tuscany px-2 font-krete text-[11px] text-white dark:bg-navy"
                     >{{ teamMember.name }}</span
                 >
-                <div
-                    v-if="teamMember.image?.asset"
-                    class="flex h-full w-full flex-shrink-0"
-                >
-                    <SanityImage
-                        :asset-id="`${teamMember?.image?.asset._ref}`"
-                        auto="format"
-                        h="800"
-                        w="1000"
-                        fit="fillmax"
-                        :alt="teamMember.name"
-                        class="h-full w-full flex-shrink-0 object-cover"
-                    />
-                </div>
+                <transition name="fade" mode="out-in">
+                    <div
+                        v-if="teamMember.image?.asset"
+                        class="flex h-full w-full flex-shrink-0"
+                    >
+                        <SanityImage
+                            :asset-id="`${teamMember?.image?.asset._ref}`"
+                            auto="format"
+                            h="800"
+                            w="1000"
+                            fit="fillmax"
+                            :alt="teamMember.name"
+                            class="h-full w-full flex-shrink-0 object-cover"
+                        />
+                    </div>
+                </transition>
             </li>
-        </ul>
+        </transition-group>
     </div>
 </template>
 
 <script lang="ts" setup>
-const allTeamMembers: Ref<null | TeamMemberExtend[]> = ref(null)
-const shuffledAllTeamMembers: Ref<null | TeamMemberExtend[]> = ref(null)
+interface TeamMemberExtend {
+    _id: string
+    name: string
+    image?: {
+        asset?: {
+            _ref: string
+        }
+    }
+}
+
+const allTeamMembers = ref<TeamMemberExtend[] | null>(null)
+const shuffledAllTeamMembers = ref<TeamMemberExtend[] | null>(null)
 
 const shuffleTeamMembers = (): void => {
     if (allTeamMembers.value === null) {
@@ -51,6 +65,7 @@ const shuffleTeamMembers = (): void => {
 const hasTeamMembers = computed(
     () => allTeamMembers.value !== null && allTeamMembers.value.length > 0
 )
+
 const fetchTeamMembers = async () => {
     const sanity = useSanity()
 
@@ -70,3 +85,18 @@ onMounted(async () => {
     shuffleTeamMembers()
 })
 </script>
+
+<style scoped>
+.list-enter-active,
+.list-leave-active {
+    transition: all 0.5s;
+}
+.list-enter-from,
+.list-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.list-move {
+    transition: transform 0.5s;
+}
+</style>
