@@ -15,8 +15,7 @@
             </div>
         </div>
         <div class="flex flex-col gap-16">
-            <reviews-google />
-            <reviews-tripadvisor />
+            <social-reviews />
         </div>
     </div>
 </template>

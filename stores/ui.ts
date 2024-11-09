@@ -3,12 +3,14 @@ import { defineStore } from 'pinia'
 interface State {
     showMobileNav: boolean
     showModalGoodeats: boolean
+    showReviewDetails: boolean
 }
 
 export const useUiStore = defineStore('ui', {
     state: (): State => ({
         showMobileNav: false,
-        showModalGoodeats: false
+        showModalGoodeats: false,
+        showReviewDetails: false
     }),
     actions: {
         toggleMobileNav(visible?: boolean): void {
