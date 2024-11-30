@@ -77,6 +77,11 @@ const navigation: NavItem[] = [
         url: '/gallery'
     },
     {
+        key: 'faqs',
+        label: 'FAQs',
+        url: '/faqs'
+    },
+    {
         key: 'contact',
         label: 'Contact',
         url: '/contact'

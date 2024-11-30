@@ -13,7 +13,7 @@
                 target="_blank"
                 to="https://www.tripadvisor.co.uk/Restaurant_Review-g1234748-d23838579-Reviews-Been_Coffee-Willington_Derbyshire_England.html"
             >
-                See all
+                Leave your own
             </nuxt-link>
         </div>
         <div v-if="tripadvisorData" class="lg:container overflow-clip">
