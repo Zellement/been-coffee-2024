@@ -8,7 +8,7 @@
             >
                 <nuxt-link
                     :to="navItem.url"
-                    class="mr-4"
+                    class="lg:mr-2 xl:mr-4 2xl:mr-5"
                     @click="uiStore.toggleMobileNav(false)"
                 >
                     {{ navItem.label }}
@@ -55,6 +55,11 @@ const navigation: NavItem[] = [
         key: 'reviews',
         label: 'Reviews',
         url: '/reviews'
+    },
+    {
+        key: 'events',
+        label: 'Events',
+        url: '/events'
     },
     // {
     //     key: 'find-us',
