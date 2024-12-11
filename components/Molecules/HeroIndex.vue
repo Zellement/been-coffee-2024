@@ -24,7 +24,7 @@
                 src="/img/shop-exterior.jpeg"
                 alt="Shop exterior"
                 class="h-full w-full object-cover"
-                sizes="336px xs:440px sm:560px lg:780px xl:1400px"
+                sizes="280px xs:280px sm:600px lg:900px xl:1200px"
                 loading="eager"
             />
         </div>
