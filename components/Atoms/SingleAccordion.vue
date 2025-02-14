@@ -43,7 +43,7 @@
                             v-if="props.link"
                             :to="props.link"
                             class="btn mt-4 inline-flex"
-                            target="_blank"
+                            :target="linkNewTab ? '_blank' : '_self'"
                         >
                             {{ props.linkTitle }}
                         </nuxt-link>
@@ -62,6 +62,7 @@ interface Props {
     title: string
     link?: string
     linkTitle?: string
+    linkNewTab?: boolean
 }
 
 const props = defineProps<Props>()

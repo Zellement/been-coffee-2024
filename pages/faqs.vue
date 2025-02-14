@@ -16,6 +16,7 @@
                     :title="faq.question"
                     :link="faq.link"
                     :link-title="faq.linkTitle"
+                    :link-new-tab="faq.linkNewTab"
                 >
                     <p class="mt-2">{{ faq.answer }}</p>
                 </single-accordion>
@@ -49,7 +50,14 @@ const faqs = ref([
         question: 'How about loyalty cards?',
         answer: 'We offer both digital and physical loyalty cards. Ask one of our friendly staff for more information.',
         linkTitle: 'Download the Magic Stamp App',
-        link: 'https://linktr.ee/beencoffeeuk'
+        link: 'https://linktr.ee/beencoffeeuk',
+        linkNewTab: true
+    },
+    {
+        question: 'Can I book a table?',
+        answer: 'Yes! Visit our Book a Table page to send a request.',
+        linkTitle: 'Book a Table',
+        link: '/bookings'
     },
     {
         question: 'Can I order online?',
@@ -58,6 +66,10 @@ const faqs = ref([
     {
         question: 'Do you have high chairs?',
         answer: 'We have two highchairs available for use.'
+    },
+    {
+        question: 'Do you have a baby changer?',
+        answer: "We do, however please be advised these are used at customer's own risk."
     },
     {
         question: 'Can I bring my laptop and work from the shop?',
@@ -71,7 +83,8 @@ const faqs = ref([
         question: 'Do you have any jobs going?',
         answer: 'Best place to  find this out is on our Linktree where we add our latest vacancies.',
         linkTitle: 'Linktree',
-        link: 'https://linktr.ee/beencoffeeuk'
+        link: 'https://linktr.ee/beencoffeeuk',
+        linkNewTab: true
     }
 ])
 </script>
