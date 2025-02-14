@@ -9,9 +9,12 @@
         <div class="container container-px grid gap-16 lg:grid-cols-2">
             <div v-for="event in events" :key="event.title" class="">
                 <div class="mb-4 flex flex-col gap-8 text-center">
-                    <h2 class="font-riverside text-lg">
-                        {{ event.title }}
-                    </h2>
+                    <div class="flex flex-col justify-center">
+                        <h2 class="font-riverside text-lg">
+                            {{ event.title }}
+                        </h2>
+                        <p>{{ event.time }}</p>
+                    </div>
                     <single-picture
                         :img-data="{
                             url: `/img/events/${event.img}`,
@@ -44,6 +47,7 @@ useHead({
 type Event = {
     title: string
     dates: string[]
+    time: string
     img: string
 }
 
@@ -51,6 +55,7 @@ const events: Event[] = [
     {
         title: 'Creative Writing Group',
         img: 'cwg.jpg',
+        time: '17:45 - 19:15',
         dates: [
             '13/01/2025',
             '10/02/2025',
@@ -63,6 +68,7 @@ const events: Event[] = [
     {
         title: 'Been Networking',
         img: 'beennetworking.jpg',
+        time: '16:00 - 17:30',
         dates: [
             '07/01/2025',
             '04/02/2025',
