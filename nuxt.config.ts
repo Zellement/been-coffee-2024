@@ -19,6 +19,12 @@ export default defineNuxtConfig({
         'nuxt-gtag'
     ],
 
+    image: {
+        sanity: {
+            projectId: 'mxklvbih'
+        }
+    },
+
     routeRules: {
         '/_icons': { robots: false }
     },
