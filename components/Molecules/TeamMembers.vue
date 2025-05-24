@@ -23,7 +23,7 @@
                         v-if="teamMember.image?.asset"
                         class="flex h-full w-full flex-shrink-0"
                     >
-                        <nuxt-img
+                        <img
                             :src="
                                 $urlFor(teamMember.image)
                                     .width(800)
