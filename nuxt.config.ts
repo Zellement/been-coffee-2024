@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     ],
 
     image: {
-        provider: 'netlify',
+        provider: process.env.NODE_ENV === 'production' ? 'netlify' : 'ipx',
         domains: ['cdn.sanity.io']
     },
 

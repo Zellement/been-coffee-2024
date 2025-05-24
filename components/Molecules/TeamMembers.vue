@@ -31,7 +31,7 @@
                                     .url()
                             "
                             height="800"
-                            width="1000"
+                            fit="cover"
                             loading="lazy"
                         />
                     </div>
