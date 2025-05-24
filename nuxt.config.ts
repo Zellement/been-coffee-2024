@@ -20,15 +20,13 @@ export default defineNuxtConfig({
     ],
 
     image: {
-        sanity: {
-            projectId: 'mxklvbih'
-        }
+        provider: 'netlify',
+        domains: ['cdn.sanity.io']
     },
 
     routeRules: {
         '/_icons': { robots: false }
     },
-
     gtag: {
         id: 'G-CVLJZSC9E6'
     },
