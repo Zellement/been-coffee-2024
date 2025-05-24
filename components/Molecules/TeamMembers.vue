@@ -33,6 +33,7 @@
                             height="800"
                             width="1000"
                             loading="lazy"
+                            provider="sanity"
                         />
                     </div>
                 </transition>
