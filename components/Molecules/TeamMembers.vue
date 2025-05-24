@@ -23,14 +23,16 @@
                         v-if="teamMember.image?.asset"
                         class="flex h-full w-full flex-shrink-0"
                     >
-                        <SanityImage
-                            :asset-id="`${teamMember?.image?.asset._ref}`"
-                            auto="format"
-                            h="800"
-                            w="1000"
-                            fit="fillmax"
-                            :alt="teamMember.name"
-                            class="h-full w-full flex-shrink-0 object-cover"
+                        <nuxt-img
+                            :src="
+                                $urlFor(teamMember.image)
+                                    .width(800)
+                                    .height(1000)
+                                    .url()
+                            "
+                            height="800"
+                            width="1000"
+                            loading="lazy"
                         />
                     </div>
                 </transition>
@@ -52,6 +54,10 @@ interface TeamMemberExtend {
 
 const allTeamMembers = ref<TeamMemberExtend[] | null>(null)
 const shuffledAllTeamMembers = ref<TeamMemberExtend[] | null>(null)
+
+// Add a type for $urlFor to avoid 'unknown' type error
+// Extract $urlFor from Nuxt app instance without unsafe type assertion
+const $urlFor = (useNuxtApp() as any).$urlFor as (image: any) => any
 
 const shuffleTeamMembers = (): void => {
     if (allTeamMembers.value === null) {
