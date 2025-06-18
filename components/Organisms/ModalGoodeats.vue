@@ -20,6 +20,7 @@
                     <iframe
                         src="https://goodeats.io/beencoffee?embed_outlet=beencoffee"
                         class="h-full w-full"
+                        allow="identity-credentials-get"
                     />
                 </div>
             </div>
