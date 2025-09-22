@@ -66,11 +66,11 @@ const navigation: NavItem[] = [
     //     label: 'Find Us',
     //     url: '/where'
     // },
-    {
-        key: 'team',
-        label: 'Team',
-        url: '/team'
-    },
+    // {
+    //     key: 'team',
+    //     label: 'Team',
+    //     url: '/team'
+    // },
     {
         key: 'gallery',
         label: 'Gallery',
