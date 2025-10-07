@@ -21,6 +21,7 @@ export const useReviewsStore = defineStore('reviews', {
                 this.reviewsTripadvisor = data[0].reviews_tripadvisor
             } else {
                 const { data } = await useFetch('/api/tripadvisor')
+                console.log(data.value.data)
                 await client
                     .from('reviews')
                     .update({ reviews_tripadvisor: data.value.data })

@@ -13,7 +13,9 @@
                         <h2 class="font-riverside text-lg">
                             {{ event.title }}
                         </h2>
-                        <p>{{ event.time }}</p>
+                        <p class="text-xs">
+                            {{ event.frequency }} | {{ event.time }}
+                        </p>
                     </div>
                     <single-picture
                         :img-data="{
@@ -21,11 +23,11 @@
                             alt: event.title
                         }"
                     />
-                    <ul class="flex flex-col gap-1">
+                    <!-- <ul class="flex flex-col gap-1">
                         <li v-for="date in event.dates" :key="date">
                             {{ date }}
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -47,28 +49,17 @@ useHead({
 type Event = {
     title: string
     dates: string[]
+    frequency: string
     time: string
     img: string
 }
 
 const events: Event[] = [
     {
-        title: 'Creative Writing Group',
-        img: 'cwg.jpg',
-        time: '17:45 - 19:15',
-        dates: [
-            '13/01/2025',
-            '10/02/2025',
-            '10/03/2025',
-            '14/04/2025',
-            '12/05/2025',
-            '09/06/2025'
-        ]
-    },
-    {
         title: 'Been Networking',
         img: 'beennetworking.jpg',
-        time: '16:00 - 17:30',
+        time: '16:00 - 18:00',
+        frequency: '1st Tuesday of the month',
         dates: [
             '07/01/2025',
             '04/02/2025',
@@ -76,6 +67,20 @@ const events: Event[] = [
             '01/04/2025',
             '06/05/2025',
             '04/06/2025'
+        ]
+    },
+    {
+        title: 'Creative Writing Group',
+        img: 'cwg.jpg',
+        time: '17:45 - 19:15',
+        frequency: '2nd Monday of the month',
+        dates: [
+            '13/01/2025',
+            '10/02/2025',
+            '10/03/2025',
+            '14/04/2025',
+            '12/05/2025',
+            '09/06/2025'
         ]
     }
 ]
