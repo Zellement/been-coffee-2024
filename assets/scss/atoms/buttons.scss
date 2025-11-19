@@ -1,5 +1,5 @@
 .btn {
-    @apply px-6 py-1 font-krete text-base rounded text-current border-current transition-colors duration-300 border relative;
+    @apply px-6 py-1 font-krete text-md rounded text-current border-current transition-colors duration-300 border relative;
 
     &:after {
         content: '';

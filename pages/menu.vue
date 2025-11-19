@@ -1,6 +1,6 @@
 <template>
     <div class="page pb-16">
-        <div
+        <!-- <div
             class="container container-px flex flex-col items-center py-8 text-center"
         >
             <page-title title="Menu" class="mb-4" />
@@ -18,14 +18,14 @@
                 :img-data="{ url: `/img/menus/0${i}.png`, alt: `Menu` }"
                 sizes="336px 2xs:425px xs:472px sm:560px lg:880px"
             />
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script setup lang="ts">
 // const uiStore = useUiStore()
 
-const images = 6
+// const images = 6
 
 useHead({
     title: 'Menu',

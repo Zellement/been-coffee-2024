@@ -58,7 +58,7 @@ export default defineNuxtConfig({
         url: 'https://www.been.coffee',
         name: 'Been Coffee',
         description:
-            'Been Coffee is an independent, award-winning coffee shop with amazing coffee, tea, bubble tea, boba tea, cakes, bagels, cobs & paninis near Derby & Willington, UK',
+            'Been Coffee is a locally owned, award-winning coffee shop with amazing coffee, tea, bubble tea, boba tea, cakes, bagels, cobs & paninis near Derby & Willington, UK',
         defaultLocale: 'en',
         trailingSlash: false
     },

@@ -46,11 +46,11 @@ const navigation: NavItem[] = [
         label: 'Order Online',
         url: '/order'
     },
-    {
-        key: 'menu',
-        label: 'Menu',
-        url: '/menu'
-    },
+    // {
+    //     key: 'menu',
+    //     label: 'Menu',
+    //     url: '/menu'
+    // },
     {
         key: 'reviews',
         label: 'Reviews',
