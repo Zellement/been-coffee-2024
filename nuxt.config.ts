@@ -112,7 +112,15 @@ export default defineNuxtConfig({
                 fix: true,
                 include: ['./**/*.vue', './**/*.ts', './**/*.js']
             })
-        ]
+        ],
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    // @ts-expect-error - not yet in type defs
+                    api: 'modern'
+                }
+            }
+        }
     },
 
     typescript: {
