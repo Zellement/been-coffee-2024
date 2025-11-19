@@ -7,7 +7,6 @@ node_modules
 .env
 .idea
 dist
-.contentful.json
 **/.DS_Store
 
 assets/icons/cache
