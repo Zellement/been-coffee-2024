@@ -1,19 +1,19 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@use "tailwindcss/base" as *;
+@use "tailwindcss/components" as *;
+@use "tailwindcss/utilities" as *;
 
 // Base
-@import "_base/main";
-@import "_base/animations";
-@import "_base/typography";
-@import "_base/forms";
-@import "_base/custom";
-@import "_base/transitions";
+@use "_base/main" as *;
+@use "_base/animations" as *;
+@use "_base/typography" as *;
+@use "_base/forms" as *;
+@use "_base/custom" as *;
+@use "_base/transitions" as *;
 
 // Atoms
-@import "atoms/buttons";
+@use "atoms/buttons" as *;
 
 // Molecules
 
 // Organisms
-@import "organisms/site-nav";
+@use "organisms/site-nav" as *;

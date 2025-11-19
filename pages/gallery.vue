@@ -20,7 +20,7 @@ useHead({
     title: 'Gallery',
     meta: [
         {
-            hid: 'description',
+            id: 'description',
             name: 'description',
             content:
                 'See a collection of photos from Been Coffee in Willington near Derby, UK'

@@ -25,7 +25,7 @@ useHead({
     title: 'Contact us',
     meta: [
         {
-            hid: 'description',
+            id: 'description',
             name: 'description',
             content: 'Get in touch with us'
         }

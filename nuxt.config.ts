@@ -24,9 +24,6 @@ export default defineNuxtConfig({
         domains: ['cdn.sanity.io']
     },
 
-    routeRules: {
-        '/_icons': { robots: false }
-    },
     gtag: {
         id: 'G-CVLJZSC9E6'
     },
@@ -88,7 +85,7 @@ export default defineNuxtConfig({
                     name: 'viewport',
                     content: 'width=device-width, initial-scale=1'
                 },
-                { hid: 'og-type', property: 'og:type', content: 'website' }
+                { id: 'og-type', property: 'og:type', content: 'website' }
             ],
             link: [
                 {

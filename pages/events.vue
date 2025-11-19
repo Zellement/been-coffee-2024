@@ -39,7 +39,7 @@ useHead({
     title: 'Events',
     meta: [
         {
-            hid: 'description',
+            id: 'description',
             name: 'description',
             content: 'Find out about upcoming events at Been Coffee.'
         }

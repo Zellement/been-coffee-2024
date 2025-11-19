@@ -20,7 +20,7 @@ useHead({
     title: 'Book a table',
     meta: [
         {
-            hid: 'description',
+            id: 'description',
             name: 'description',
             content: 'Book a table at Been Coffee near Willington and Derby, UK'
         }

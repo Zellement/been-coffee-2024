@@ -31,7 +31,7 @@ useHead({
     title: 'Menu',
     meta: [
         {
-            hid: 'description',
+            id: 'description',
             name: 'description',
             content:
                 'Order for collection at Been Coffee near Willington and Derby, UK'

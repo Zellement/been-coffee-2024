@@ -30,7 +30,7 @@ useHead({
     title: 'FAQs',
     meta: [
         {
-            hid: 'description',
+            id: 'description',
             name: 'description',
             content: 'Read our frequently asked questions.'
         }

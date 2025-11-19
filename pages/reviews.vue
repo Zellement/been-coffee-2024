@@ -26,7 +26,7 @@ useHead({
     title: 'Reviews',
     meta: [
         {
-            hid: 'description',
+            id: 'description',
             name: 'description',
             content: 'See our recent reviews from Google and Tripadvisor'
         }
