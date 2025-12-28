@@ -72,7 +72,7 @@ const events: Event[] = [
     {
         title: 'Creative Writing Group',
         img: 'cwg.jpg',
-        time: '17:45 - 19:15',
+        time: '17:30 - 19:00',
         frequency: '2nd Monday of the month',
         dates: [
             '13/01/2025',
