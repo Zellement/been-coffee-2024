@@ -16,6 +16,18 @@
                         <p class="text-xs">
                             {{ event.frequency }} | {{ event.time }}
                         </p>
+                        <p v-if="event.description" class="my-2">
+                            {{ event.description }}
+                        </p>
+                        <p v-if="event.contact" class="text-xs">
+                            Contact:
+                            <a
+                                target="_blank"
+                                :href="`${event.contact}`"
+                                class="underline"
+                                >{{ event.contactText }}</a
+                            >
+                        </p>
                     </div>
                     <single-picture
                         :img-data="{
@@ -50,8 +62,11 @@ type Event = {
     title: string
     dates: string[]
     frequency: string
+    description?: string
     time: string
     img: string
+    contact?: string
+    contactText?: string
 }
 
 const events: Event[] = [
@@ -60,6 +75,10 @@ const events: Event[] = [
         img: 'beennetworking.jpg',
         time: '16:00 - 18:00',
         frequency: '1st Tuesday of the month',
+        description:
+            'Networking for professionals in and around the local area.',
+        contact: 'https://uk.linkedin.com/in/ianpownall',
+        contactText: 'Ian Pownall on LinkedIn',
         dates: [
             '07/01/2025',
             '04/02/2025',
@@ -74,6 +93,10 @@ const events: Event[] = [
         img: 'cwg.jpg',
         time: '17:30 - 19:00',
         frequency: '2nd Monday of the month',
+        description:
+            'Join a group of friendly local writing enthusiasts for a cuppa, cake and a chat.',
+        contact: 'mailto:writeherecontact@gmail.com',
+        contactText: 'writeherecontact@gmail.com',
         dates: [
             '13/01/2025',
             '10/02/2025',
