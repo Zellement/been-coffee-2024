@@ -73,7 +73,7 @@ const events: Event[] = [
     {
         title: 'Been Networking',
         img: 'beennetworking.jpg',
-        time: '16:00 - 18:00',
+        time: '16:30 - 18:00',
         frequency: '1st Tuesday of the month',
         description:
             'Networking for professionals in and around the local area.',
